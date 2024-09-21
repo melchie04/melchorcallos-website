@@ -36,5 +36,5 @@ npm run dev
 ```
 
 ### ☕ Buy me a coffee?
-![image](https://img.shields.io/badge/paypal-melchorcallos04@gmail.com-blue?style=flat-square&logo=paypal)
+[![image](https://img.shields.io/badge/paypal-melchorcallos04@gmail.com-blue?style=flat-square&logo=paypal)](https://www.paypal.com/paypalme/melchorcallos04)
 
