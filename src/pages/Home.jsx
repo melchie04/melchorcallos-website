@@ -9,30 +9,6 @@ const Home = () => {
   const [text] = useTypewriter(contents.typewriter);
   const { setActivePage } = usePageControl();
 
-  const HeroImage = () => {
-    return (
-      <div className="flex flex-1 justify-center items-center">
-        <Link
-          className="size-48 relative rounded-full overflow-hidden bg-dark dark:bg-light after:bg-light after:dark:bg-dark
-            before:bg-gradient-to-t before:from-primary before:dark:to-secondary-dark before:to-secondary-light circular-spin-animation"
-          to="/contact"
-          onClick={() => setActivePage("/contact")}
-        >
-          <div className="flex flex-col justify-center items-center absolute inset-[12px] z-10 rounded-full overflow-hidden cursor-pointer">
-            <img
-              className="w-full h-full absolute top-0 left-0 object-cover bg-dark dark:bg-light transition-opacity duration-500 hover:opacity-0"
-              src={contents.image}
-              alt="Avatar"
-            />
-            <p className="w-full h-full flex justify-center items-center bg-dark dark:bg-light text-primary text-center text-xl font-bold">
-              SAY HELLO!
-            </p>
-          </div>
-        </Link>
-      </div>
-    );
-  };
-
   const Greetings = () => {
     return (
       <div className="flex flex-col justify-center md:items-start items-center md:mx-5 md:my-0 mx-0 my-5">
@@ -57,7 +33,25 @@ const Home = () => {
       className="w-full h-full flex flex-col justify-center items-center"
     >
       <div className="flex flex-col md:flex-row items-center">
-        <HeroImage />
+        <div className="flex flex-1 justify-center items-center">
+          <Link
+            className="size-48 relative rounded-full overflow-hidden bg-dark dark:bg-light after:bg-light after:dark:bg-dark
+            before:bg-gradient-to-t before:from-primary before:dark:to-secondary-dark before:to-secondary-light circular-spin-animation"
+            to="/contact"
+            onClick={() => setActivePage("/contact")}
+          >
+            <div className="flex flex-col justify-center items-center absolute inset-[12px] z-10 rounded-full overflow-hidden cursor-pointer">
+              <img
+                className="w-full h-full absolute top-0 left-0 object-cover bg-dark dark:bg-light transition-opacity duration-500 hover:opacity-0"
+                src={contents.image}
+                alt="Avatar"
+              />
+              <p className="w-full h-full flex justify-center items-center bg-dark dark:bg-light text-primary text-center text-xl font-bold">
+                SAY HELLO!
+              </p>
+            </div>
+          </Link>
+        </div>
         <Greetings />
       </div>
     </motion.div>
