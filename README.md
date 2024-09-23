@@ -3,6 +3,7 @@ Welcome to My Personal Website! This website is a showcase of my work in automat
 
 <img src="https://github.com/melchie04/melchorcallos/blob/main/public/screenshot.jpg?raw=true" alt="Melchor Callos Website" width="600"/>
 
+#
 ### 🧰 Tools I've Used:
 ![image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![image](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -11,11 +12,17 @@ Welcome to My Personal Website! This website is a showcase of my work in automat
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![image](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white)
 
+#
 ### 📧 If you find any bugs on the website, please contact me here:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Melchor%20Callos-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/melchorcallos)
 [![Facebook](https://img.shields.io/badge/facebook-melchorcallos-blue?style=flat-square&logo=facebook)](https://fb.com/melchorcallos)
 [![Email](https://img.shields.io/badge/Email-melchorcallos04%40gmail.com-blue?style=flat-square&logo=gmail)](mailto:melchorcallos04@gmail.com)
 
+#
+### ☕ Buy me a coffee?
+[![image](https://img.shields.io/badge/paypal-melchorcallos04@gmail.com-blue?style=flat-square&logo=paypal)](https://www.paypal.com/paypalme/melchorcallos04)
+
+#
 ### 📁 Installation:
 To use My Personal Website, follow these steps:
 1. Clone the Repository
@@ -34,7 +41,4 @@ npm install
 ```bash
 npm run dev
 ```
-
-### ☕ Buy me a coffee?
-[![image](https://img.shields.io/badge/paypal-melchorcallos04@gmail.com-blue?style=flat-square&logo=paypal)](https://www.paypal.com/paypalme/melchorcallos04)
 
