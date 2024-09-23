@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithubSquare, FaFacebookSquare } from "react-icons/fa";
 import { contents, skills, links } from "../assets/contents/about";
 import PageTitle from "../components/PageTitle";
 import PageHeading1 from "../components/PageHeading1";
-import PageEmphasis from "../components/PageEmphasis";
+import PageEmphasis1 from "../components/PageEmphasis1";
 import PageContent1 from "../components/PageContent1";
 import LinkButton from "../components/LinkButton";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -64,7 +64,7 @@ const About = () => {
       />
       <div className="lg:max-w-4xl md:max-w-2xl max-w-xs flex flex-col justify-center items-center text-center p-2">
         <PageHeading1>{contents.name}</PageHeading1>
-        <PageEmphasis>{contents.roles}</PageEmphasis>
+        <PageEmphasis1>{contents.roles}</PageEmphasis1>
         <SocialButtons />
         <PageContent1>{contents.description}</PageContent1>
         <AliceCarousel

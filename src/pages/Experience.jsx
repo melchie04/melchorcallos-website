@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { contents, experiences } from "../assets/contents/experience";
 import PageTitle from "../components/PageTitle";
 import PageHeading1 from "../components/PageHeading1";
-import PageEmphasis from "../components/PageEmphasis";
+import PageEmphasis1 from "../components/PageEmphasis1";
 import PageParagraph from "../components/PageContent1";
 
 const Experience = () => {
@@ -41,7 +41,7 @@ const Experience = () => {
               </div>
               <div className="mb-6 ms-4 mt-2">
                 <PageHeading1>{experience.position}</PageHeading1>
-                <PageEmphasis>{experience.company}</PageEmphasis>
+                <PageEmphasis1>{experience.company}</PageEmphasis1>
                 {openIndex === index && (
                   <PageParagraph>{experience.details}</PageParagraph>
                 )}

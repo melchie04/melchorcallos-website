@@ -9,6 +9,7 @@ import {
 import { contents, projects } from "../assets/contents/portfolio";
 import PageTitle from "../components/PageTitle";
 import PageHeading2 from "../components/PageHeading2";
+import PageEmphasis2 from "../components/PageEmphasis2";
 import PageContent2 from "../components/PageContent2";
 import LinkButton from "../components/LinkButton";
 
@@ -71,7 +72,7 @@ const Portfolio = () => {
             className="w-full h-40 md:h-56 bg-gray-800 dark:bg-gray-200 border-2 border-primary relative group"
           >
             <img
-              src={item.src}
+              src={item.image}
               alt={item.name}
               className="w-full h-full object-cover"
             />
@@ -86,6 +87,7 @@ const Portfolio = () => {
                 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
             >
               <PageHeading2>{item.name}</PageHeading2>
+              <PageEmphasis2>{item.category}</PageEmphasis2>
               <PageContent2>{item.details}</PageContent2>
               <div className="flex space-x-2 mt-4">
                 {item.github && (
