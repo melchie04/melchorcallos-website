@@ -30,8 +30,8 @@ function App() {
         </AnimatePresence>
         <SocialMenu />
         <DownloadButton />
+        <Background />
       </div>
-      <Background />
     </>
   );
 }
