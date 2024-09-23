@@ -14,7 +14,7 @@ const Home = () => {
       <div className="flex flex-1 justify-center items-center">
         <Link
           className="size-48 relative rounded-full overflow-hidden bg-dark dark:bg-light after:bg-light after:dark:bg-dark
-             before:from-primary before:bg-gradient-to-t before:dark:to-secondary-dark before:to-secondary-light circular-spin-animation"
+            before:bg-gradient-to-t before:from-primary before:dark:to-secondary-dark before:to-secondary-light circular-spin-animation"
           to="/contact"
           onClick={() => setActivePage("/contact")}
         >
@@ -22,6 +22,7 @@ const Home = () => {
             <img
               className="w-full h-full absolute top-0 left-0 object-cover bg-dark dark:bg-light transition-opacity duration-500 hover:opacity-0"
               src={contents.image}
+              alt="Avatar"
             />
             <p className="w-full h-full flex justify-center items-center bg-dark dark:bg-light text-primary text-center text-xl font-bold">
               SAY HELLO!
