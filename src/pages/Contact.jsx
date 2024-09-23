@@ -1,32 +1,62 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
 import { contents } from "../assets/contents/contact";
 import PageTitle from "../components/PageTitle";
+import "react-toastify/dist/ReactToastify.css";
 
 const publicKey = import.meta.env.VITE_PUBLIC_KEY;
-const privateKey = import.meta.env.VITE_PRIVATE_KEY;
 const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
 
 emailjs.init(publicKey);
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    emailjs
-      .sendForm(serviceId, templateId, e.target, publicKey, {
-        privateKey: privateKey,
-      })
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm(serviceId, templateId, e.target, publicKey).then(
+      (result) => {
+        console.log(result.text);
+        toastSuccess("Email sent successfully!");
+        setLoading(false);
+      },
+      (error) => {
+        console.log(error.text);
+        toastError("Failed to send email. Please try again.");
+        setLoading(false);
+      }
+    );
+  };
+
+  const toastSuccess = (text) => {
+    toast.success(text, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
+  const toastError = (text) => {
+    toast.error(text, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
 
   const Form = () => {
@@ -36,33 +66,38 @@ const Contact = () => {
         onSubmit={sendEmail}
       >
         <input
-          className="w-full bg-transparent rounded-md border-2 border-primary focus:outline-none focus:ring-2  focus:ring-primary p-2"
+          className="w-full bg-transparent rounded-md border-2 border-primary focus:outline-none focus:ring-2 focus:ring-primary p-2"
           type="text"
           id="name"
           name="name"
           autoComplete="off"
           placeholder="Name"
+          required
         />
         <input
-          className="w-full bg-transparent rounded-md border-2 border-primary focus:outline-none focus:ring-2  focus:ring-primary p-2"
+          className="w-full bg-transparent rounded-md border-2 border-primary focus:outline-none focus:ring-2 focus:ring-primary p-2"
           type="email"
           id="email"
           name="email"
           autoComplete="off"
           placeholder="Email"
+          required
         />
         <textarea
-          className="w-full bg-transparent rounded-md border-2 border-primary focus:outline-none focus:ring-2  focus:ring-primary p-2 pb-12 custom-scrollbar"
+          className="w-full bg-transparent rounded-md border-2 border-primary focus:outline-none focus:ring-2 focus:ring-primary p-2 pb-12 custom-scrollbar"
           id="message"
           name="message"
           autoComplete="off"
           placeholder="Message"
+          required
         ></textarea>
-        <input
-          className="flex justify-center items-center bg-primary text-lg text-gray-200 dark:text-gray-800 font-bold 
-              rounded-lg cursor-pointer py-2 px-8 transition duration-300 hover:bg-primary/60"
+        <button
+          className="flex justify-center items-center bg-primary text-lg text-gray-200 dark:text-gray-800 font-bold rounded-lg cursor-pointer py-2 px-8 transition duration-300 hover:bg-primary/60"
           type="submit"
-        />
+          disabled={loading}
+        >
+          {loading ? "Sending..." : "Send"}
+        </button>
       </form>
     );
   };
@@ -80,6 +115,7 @@ const Contact = () => {
         subtitle={contents.subtitle}
       />
       <Form />
+      <ToastContainer />
     </motion.div>
   );
 };

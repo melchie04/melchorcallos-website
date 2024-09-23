@@ -16,7 +16,6 @@ function App() {
 
   return (
     <>
-      <Background />
       <div className="w-screen h-screen flex flex-col items-center overflow-hidden">
         <NavBar />
         <AnimatePresence mode="wait">
@@ -32,6 +31,7 @@ function App() {
         <SocialMenu />
         <DownloadButton />
       </div>
+      <Background />
     </>
   );
 }
