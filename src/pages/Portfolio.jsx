@@ -69,7 +69,7 @@ const Portfolio = () => {
         {currentItems.map((item, index) => (
           <div
             key={index}
-            className="w-full h-40 md:h-56 bg-gray-800 dark:bg-gray-200 border-2 border-primary relative group"
+            className="max-w-72 w-full h-40 md:h-56 bg-gray-800 dark:bg-gray-200 border-2 border-primary relative group"
           >
             <img
               src={item.image}
