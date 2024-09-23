@@ -1,4 +1,4 @@
-import jmm from "../images/experiences/jmm.png";
+import jiomhw from "../images/experiences/jiomhw.png";
 import vertere from "../images/experiences/vertere.png";
 import aaisi from "../images/experiences/aaisi.png";
 import leekie from "../images/experiences/leekie.png";
@@ -36,7 +36,7 @@ export const experiences = [
   {
     position: "Research & Development Programmer",
     company: "JIO MHW Global Channel Manufacturing Corp.",
-    icon: jmm,
+    icon: jiomhw,
     date: "December 2017 - November 2018",
     details:
       "I developed a desktop application using C# in MS Visual Studio and programmed C++ on Arduino to control the underlying small machine. I maintained and improved the desktop application's functionality and researched ways to enhance its performance.",
