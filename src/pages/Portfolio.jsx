@@ -12,11 +12,11 @@ import PageHeading2 from "../components/PageHeading2";
 import PageEmphasis2 from "../components/PageEmphasis2";
 import PageContent2 from "../components/PageContent2";
 import LinkButton from "../components/LinkButton";
-import LazyImage from "../components/LazyImage";
 
 const Portfolio = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6);
+  const [imgLoading, setImgLoading] = useState(true);
 
   useEffect(() => {
     const updateItemsPerPage = () => {
@@ -70,12 +70,16 @@ const Portfolio = () => {
         {currentItems.map((item, index) => (
           <div
             key={index}
-            className="max-w-72 w-full h-40 md:h-56 bg-gray-800 dark:bg-gray-200 border-2 border-primary relative group"
+            className={`max-w-72 w-full h-40 md:h-56 bg-gray-800 dark:bg-gray-200 border-2 border-primary relative group 
+              transition-opacity duration-500 ${
+                imgLoading ? "opacity-0" : "opacity-100"
+              }`}
           >
-            <LazyImage
+            <img
               src={item.image}
               alt={item.name}
               className="w-full h-full object-cover"
+              onLoad={() => setImgLoading(false)}
             />
             <div
               className="w-full absolute bottom-0 left-0 bg-opacity-30 bg-gray-800 dark:bg-gray-200 
