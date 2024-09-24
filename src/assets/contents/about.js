@@ -1,4 +1,3 @@
-import graduation from "../images/personal/graduation.jpg";
 import c from "../images/skills/c.png";
 import cplusplus from "../images/skills/cplusplus.png";
 import csharp from "../images/skills/csharp.png";
@@ -29,7 +28,6 @@ export const contents = {
   title: "About Me",
   subtitle: "Who Am I?",
   name: "Melchor Bendanillo Callos",
-  image: graduation,
   roles: "Website Developer / Software Tester",
   description: "I studied and took a bachelor's degree in information technology at the Polytechnic University of the Philippines from 2014 to 2018. I work as a software tester, specializing in automation testing. I also have expertise in white-box and functional testing. Programming is my passion, and I'm always looking to improve my skills. I love developing websites because it allows me to create functional and user-friendly solutions while honing my programming abilities. Plus, there's nothing quite like the sense of accomplishment that comes from building something that people find useful!"
 };
