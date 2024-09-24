@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { LuSend } from "react-icons/lu";
 import { ToastContainer, toast } from "react-toastify";
 import { contents } from "../assets/contents/contact";
 import PageTitle from "../components/PageTitle";
@@ -92,11 +93,40 @@ const Contact = () => {
           required
         ></textarea>
         <button
-          className="flex justify-center items-center bg-primary text-lg text-gray-200 dark:text-gray-800 font-bold rounded-lg cursor-pointer py-2 px-8 transition duration-300 hover:bg-primary/60"
+          className="flex justify-center items-center bg-primary text-lg text-light font-semibold rounded-lg cursor-pointer py-2 px-8 transition duration-300 hover:bg-primary/60"
           type="submit"
           disabled={loading}
         >
-          {loading ? "Sending..." : "Send"}
+          {loading ? (
+            <>
+              <svg
+                class="size-5 animate-spin"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              <span className="ml-2">Sending...</span>
+            </>
+          ) : (
+            <>
+              <LuSend />
+              <span className="ml-2">Send</span>
+            </>
+          )}
         </button>
       </form>
     );
