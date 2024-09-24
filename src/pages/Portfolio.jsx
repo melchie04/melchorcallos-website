@@ -82,8 +82,8 @@ const Portfolio = () => {
               onLoad={() => setImgLoading(false)}
             />
             <div
-              className="w-full absolute bottom-0 left-0 bg-opacity-30 bg-gray-800 dark:bg-gray-200 
-              text-light dark:text-dark text-center font-semibold p-2"
+              className="w-full absolute bottom-0 left-0 opacity-85 bg-gray-200 dark:bg-gray-800
+              text-dark dark:text-light text-center font-semibold p-2"
             >
               {item.name}
             </div>
