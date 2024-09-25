@@ -2,7 +2,6 @@ import eatwellwebsite from "../images/projects/eatwellwebsite.jpg";
 import gifsharewebsite from "../images/projects/gifsharewebsite.jpg";
 import onlinepalabawebsite from "../images/projects/onlinepalabawebsite.jpg";
 import chowviwebsite from "../images/projects/chowviwebsite.jpg";
-import chatappwebsite from "../images/projects/chatappwebsite.jpg";
 
 export const contents = {
   title: "My Projects",
@@ -41,13 +40,5 @@ export const projects = [
     github: "https://github.com/melchie04/chowvi-website",
     demo: "https://melchie04-chowvi.netlify.app/",
     image: chowviwebsite,
-  },
-  {
-    name: "ChatMe App",
-    category: "MERN Website Development",
-    details: "A chat app website with Socket.io for real-time messaging and encrypted MongoDB storage for user privacy.",
-    github: "https://github.com/melchie04/chat-app-website",
-    demo: "https://melchie04-chat-app-website.netlify.app/",
-    image: chatappwebsite,
   },
 ];
