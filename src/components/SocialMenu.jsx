@@ -27,7 +27,7 @@ const SocialMenu = () => {
           ${
             openSocialMenu
               ? "opacity-100 md:translate-y-0 translate-x-0"
-              : "opacity-0 md:translate-y-5 -translate-x-5"
+              : "opacity-0 md:translate-y-5 -translate-x-5 hidden"
           }`}
       >
         <RoundButton href={links.linkedin}>
