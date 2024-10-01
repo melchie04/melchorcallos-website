@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FiSun, FiMoon } from "react-icons/fi";
+
+// Providers
 import { useDarkMode } from "../providers/DarkModeProvider";
 import { usePageControl } from "../providers/PageControlProvider";
+
+// Contents
 import { contents } from "../assets/contents/navigation";
 
-const NavBar = () => {
+const Navbar = () => {
   const { darkMode, setDarkMode } = useDarkMode();
   const { activePage, setActivePage } = usePageControl();
   const [openMenu, setOpenMenu] = useState(false);
@@ -43,8 +47,8 @@ const NavBar = () => {
           md:flex md:justify-center md:items-center md:opacity-100 opacity-90
           md:bg-transparent md:dark:bg-transparent bg-gray-200 dark:bg-gray-800
           md:p-0 py-4 px-8
-          transition-all duration-300 ease-in
-          ${openMenu ? "top-20" : "top-[-490px]"}`}
+          transition-opacity duration-500 ease-in-out
+          ${openMenu ? "top-28 opacity-100" : "top-[-500px] opacity-0"}`}
       >
         {contents.links.map((link, index) => (
           <li
@@ -84,7 +88,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="w-full max-w-[1366px] fixed z-50 flex items-center justify-between p-5">
+    <div className="w-full max-w-[1240px] z-50 fixed flex justify-between p-10 left-1/2 transform -translate-x-1/2">
       <LogoImage />
       <MenuButton />
       <MenuPanel />
@@ -92,4 +96,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

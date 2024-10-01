@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaGithub, FaFacebook, FaPlus } from "react-icons/fa";
+
+// Contents
 import { links } from "../assets/contents/about";
 
 const SocialMenu = () => {
@@ -12,8 +14,8 @@ const SocialMenu = () => {
         onClick={onClick}
         target="_blank"
         rel="noopener noreferrer"
-        className="size-8 flex justify-center items-center rounded-full bg-primary 
-        text-light dark:text-dark text-xl p-2 hover:scale-125 duration-300 m-2"
+        className="size-10 flex justify-center items-center rounded-full bg-primary
+        text-light dark:text-dark text-xl hover:scale-125 duration-300 m-2"
       >
         {children}
       </a>
@@ -21,9 +23,9 @@ const SocialMenu = () => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 z-50 flex md:flex-col flex-row-reverse p-4 m-1">
+    <div className="fixed bottom-0 left-0 z-50 flex md:flex-col flex-row-reverse m-2">
       <div
-        className={`flex md:flex-col flex-row transition-all duration-300 
+        className={`flex md:flex-col flex-row transition-all duration-500 
           ${
             openSocialMenu
               ? "opacity-100 md:translate-y-0 translate-x-0"

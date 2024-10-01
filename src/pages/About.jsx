@@ -2,13 +2,19 @@ import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithubSquare, FaFacebookSquare } from "react-icons/fa";
-import { contents, skills, links } from "../assets/contents/about";
+
+// Styles
+import "react-alice-carousel/lib/alice-carousel.css";
+
+// Components
 import PageTitle from "../components/PageTitle";
 import PageHeading1 from "../components/PageHeading1";
 import PageEmphasis1 from "../components/PageEmphasis1";
 import PageContent1 from "../components/PageContent1";
 import LinkButton from "../components/LinkButton";
-import "react-alice-carousel/lib/alice-carousel.css";
+
+// Contents
+import { contents, skills, links } from "../assets/contents/about";
 
 const About = () => {
   const responsive = {

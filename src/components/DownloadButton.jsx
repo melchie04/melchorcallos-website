@@ -1,4 +1,6 @@
 import React from "react";
+
+// Contents
 import { contents } from "../assets/contents/loader";
 
 const DownloadButton = () => {
@@ -14,12 +16,12 @@ const DownloadButton = () => {
   };
 
   return (
-    <div className="fixed bottom-0 right-0 z-50 p-4">
+    <div className="fixed bottom-0 right-0 z-50">
       <button
-        className="flex items-center font-bold text-primary text-xl hover:animate-shake m-2"
+        className="flex items-center font-bold text-primary text-xl hover:animate-shake mx-4 my-2"
         onClick={handleDownload}
       >
-        <img src={contents.loader} className="size-10" />
+        <img src={contents.loader} className="h-14" />
         <span className="hidden sm:inline mr-2">DOWNLOAD</span>
         <span>CV</span>
       </button>

@@ -1,10 +1,14 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { contents, experiences } from "../assets/contents/experience";
+
+// Components
 import PageTitle from "../components/PageTitle";
 import PageHeading1 from "../components/PageHeading1";
 import PageEmphasis1 from "../components/PageEmphasis1";
 import PageParagraph from "../components/PageContent1";
+
+// Contents
+import { contents, experiences } from "../assets/contents/experience";
 
 const Experience = () => {
   const [openIndex, setOpenIndex] = useState(0);

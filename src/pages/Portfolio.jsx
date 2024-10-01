@@ -6,12 +6,16 @@ import {
   FaPlayCircle,
   FaGithub,
 } from "react-icons/fa";
-import { contents, projects } from "../assets/contents/portfolio";
+
+// Components
 import PageTitle from "../components/PageTitle";
 import PageHeading2 from "../components/PageHeading2";
 import PageEmphasis2 from "../components/PageEmphasis2";
 import PageContent2 from "../components/PageContent2";
 import LinkButton from "../components/LinkButton";
+
+// Contents
+import { contents, projects } from "../assets/contents/portfolio";
 
 const Portfolio = () => {
   const [currentPage, setCurrentPage] = useState(1);
