@@ -6,9 +6,6 @@ import { motion } from "framer-motion";
 // Providers
 import { usePageControl } from "../providers/PageControlProvider";
 
-// Components
-import ImageLoader from "../components/ImageLoader";
-
 // Contents
 import { contents } from "../assets/contents/home";
 
@@ -56,12 +53,12 @@ const Avatar = () => {
         onClick={() => setActivePage("/contact")}
       >
         <div className="flex flex-col justify-center items-center absolute inset-[12px] z-10 rounded-full overflow-hidden cursor-pointer">
-          <ImageLoader
-            className="absolute top-0 left-0 object-cover bg-dark dark:bg-light transition-opacity duration-500 hover:opacity-0"
+          <img
+            className="size-full absolute top-0 left-0 object-cover bg-dark dark:bg-light transition-opacity duration-500 hover:opacity-0"
             src={contents.image}
             alt="avatar"
           />
-          <p className="bg-dark dark:bg-light text-primary text-center text-xl font-bold">
+          <p className="size-full flex justify-center items-center bg-dark dark:bg-light text-primary text-center text-xl font-bold">
             SAY HELLO!
           </p>
         </div>
