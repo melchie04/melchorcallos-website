@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 // Components
 import Background from "./components/Background";
 import Preloader from "./components/Preloader";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 import SocialMenu from "./components/SocialMenu";
 import DownloadButton from "./components/DownloadButton";
 
@@ -33,7 +33,7 @@ function App() {
         <Preloader />
       ) : (
         <>
-          <Navbar />
+          <NavBar />
           <SocialMenu />
           <DownloadButton />
           <div className="min-h-dvh flex flex-col justify-center items-center overflow-hidden">

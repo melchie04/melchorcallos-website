@@ -10,7 +10,7 @@ import { usePageControl } from "../providers/PageControlProvider";
 // Contents
 import { contents } from "../assets/contents/navigation";
 
-const Navbar = () => {
+const NavBar = () => {
   const { darkMode, setDarkMode } = useDarkMode();
   const { activePage, setActivePage } = usePageControl();
   const [openMenu, setOpenMenu] = useState(false);
@@ -96,4 +96,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
