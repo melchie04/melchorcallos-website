@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 // Contents
@@ -10,7 +9,7 @@ const Preloader = () => {
       initial={{ opacity: 0, scale: 0.1 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      className="min-h-dvh flex flex-col justify-center items-center overflow-hidden"
+      className="min-h-screen flex flex-col justify-center items-center overflow-hidden"
     >
       <img src={contents.loader} className="w-40" alt="Loader" />
       <h1 className="xs:text-3xl text-2xl font-bold text-primary text-center animate-pulse">
