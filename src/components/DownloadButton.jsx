@@ -1,6 +1,3 @@
-import React from "react";
-
-// Contents
 import { contents } from "../assets/contents/loader";
 
 const DownloadButton = () => {

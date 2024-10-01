@@ -1,5 +1,3 @@
-import React from "react";
-
 const PageTitle = ({ title, subtitle }) => {
   return (
     <div className="flex flex-col justify-center items-center text-center m-3">

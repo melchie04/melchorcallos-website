@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-
-// Components
 import Background from "./components/Background";
 import Preloader from "./components/Preloader";
 import NavBar from "./components/NavBar";
 import SocialMenu from "./components/SocialMenu";
 import DownloadButton from "./components/DownloadButton";
-
-// Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";

@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-
-// Contents
 import { contents } from "../assets/contents/loader";
 
 const Preloader = () => {

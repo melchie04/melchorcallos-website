@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
-
-// Providers
 import { usePageControl } from "../providers/PageControlProvider";
-
-// Contents
 import { contents } from "../assets/contents/home";
 
 const Home = () => {

@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaLinkedin, FaGithub, FaFacebook, FaPlus } from "react-icons/fa";
-
-// Contents
 import { links } from "../assets/contents/about";
 
 const SocialMenu = () => {

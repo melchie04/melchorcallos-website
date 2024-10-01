@@ -2,12 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FiSun, FiMoon } from "react-icons/fi";
-
-// Providers
 import { useDarkMode } from "../providers/DarkModeProvider";
 import { usePageControl } from "../providers/PageControlProvider";
-
-// Contents
 import { contents } from "../assets/contents/navigation";
 
 const NavBar = () => {

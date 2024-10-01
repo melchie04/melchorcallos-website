@@ -3,17 +3,10 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { LuSend } from "react-icons/lu";
 import { ToastContainer, toast } from "react-toastify";
-
-// Styles
 import "react-toastify/dist/ReactToastify.css";
-
-// Components
 import PageTitle from "../components/PageTitle";
-
-// Contents
 import { contents } from "../assets/contents/contact";
 
-// Credentials
 const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
