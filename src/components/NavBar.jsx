@@ -15,8 +15,8 @@ const NavBar = () => {
   const { activePage, setActivePage } = usePageControl();
   const [openMenu, setOpenMenu] = useState(false);
 
-  const LogoImage = () => {
-    return (
+  return (
+    <div className="w-full max-w-[1240px] z-50 fixed flex justify-between p-10 left-1/2 transform -translate-x-1/2">
       <div className="flex justify-center items-center cursor-pointer md:mx-5 mx-0">
         <Link to="/" onClick={() => setActivePage("/")}>
           <img
@@ -26,22 +26,12 @@ const NavBar = () => {
           />
         </Link>
       </div>
-    );
-  };
-
-  const MenuButton = () => {
-    return (
       <div
         className="md:hidden flex justify-center items-center cursor-pointer"
         onClick={() => setOpenMenu(!openMenu)}
       >
         {openMenu ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
-    );
-  };
-
-  const MenuPanel = () => {
-    return (
       <ul
         className={`md:w-auto md:static md:z-auto w-full absolute left-0 z-50
           md:flex md:justify-center md:items-center md:opacity-100 opacity-90
@@ -84,14 +74,6 @@ const NavBar = () => {
           </button>
         </li>
       </ul>
-    );
-  };
-
-  return (
-    <div className="w-full max-w-[1240px] z-50 fixed flex justify-between p-10 left-1/2 transform -translate-x-1/2">
-      <LogoImage />
-      <MenuButton />
-      <MenuPanel />
     </div>
   );
 };
