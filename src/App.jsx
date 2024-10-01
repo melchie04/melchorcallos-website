@@ -36,7 +36,7 @@ function App() {
           <NavBar />
           <SocialMenu />
           <DownloadButton />
-          <div className="min-h-dvh flex flex-col justify-center items-center overflow-hidden">
+          <div className="min-h-screen flex flex-col justify-center items-center overflow-hidden">
             <AnimatePresence mode="wait">
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
