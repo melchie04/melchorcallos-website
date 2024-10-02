@@ -114,7 +114,7 @@ const Form = () => {
         required
       ></textarea>
       <button
-        className="flex justify-center items-center bg-primary text-lg text-light font-semibold rounded-lg cursor-pointer py-2 px-8 transition duration-300 hover:bg-primary/60"
+        className="flex justify-center items-center bg-primary text-lg text-gray-200 font-semibold rounded-lg cursor-pointer py-2 px-8 transition duration-300 hover:bg-primary/60"
         type="submit"
         disabled={loading}
       >
