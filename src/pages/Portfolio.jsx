@@ -44,7 +44,9 @@ const Projects = () => {
         modifier: 1,
         slideShadows: true,
       }}
-      pagination={true}
+      pagination={{
+        clickable: true,
+      }}
       autoplay={{
         delay: 2000,
         disableOnInteraction: false,
