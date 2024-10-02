@@ -22,11 +22,13 @@ const Contact = () => {
       transition={{ duration: 0.5, type: "tween", ease: "easeInOut" }}
       className="w-full h-full flex flex-col justify-center items-center"
     >
-      <PageTitle
-        title={contents.title.toUpperCase()}
-        subtitle={contents.subtitle}
-      />
-      <Form />
+      <div className="lg:w-1/3 md:w-1/2 min-w-80 h-full flex flex-col justify-center items-center animate-float">
+        <PageTitle
+          title={contents.title.toUpperCase()}
+          subtitle={contents.subtitle}
+        />
+        <Form />
+      </div>
       <ToastContainer />
     </motion.div>
   );
@@ -82,7 +84,7 @@ const Form = () => {
 
   return (
     <form
-      className="lg:w-1/3 md:w-1/2 w-full flex flex-col justify-center items-center mx-auto p-6 space-y-3"
+      className="w-full flex flex-col justify-center items-center p-6 space-y-3"
       onSubmit={sendEmail}
     >
       <input

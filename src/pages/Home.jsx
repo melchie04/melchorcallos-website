@@ -11,10 +11,12 @@ const Home = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 100 }}
       transition={{ duration: 0.5, type: "tween", ease: "easeInOut" }}
-      className="flex flex-col md:flex-row items-center"
+      className="w-full h-full flex flex-col justify-center items-center"
     >
-      <Avatar />
-      <Greetings />
+      <div className="flex flex-col md:flex-row items-center animate-float">
+        <Avatar />
+        <Greetings />
+      </div>
     </motion.div>
   );
 };
