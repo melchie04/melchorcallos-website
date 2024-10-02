@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { usePageControl } from "../providers/PageControlProvider";
-import { contents } from "../assets/contents/home";
+import { home } from "../assets/contents/contents";
+import { avatar } from "../assets/contents/images";
 
 const Home = () => {
   return (
@@ -22,13 +23,13 @@ const Home = () => {
 };
 
 const Greetings = () => {
-  const [text] = useTypewriter(contents.typewriter);
+  const [text] = useTypewriter(home.typewriter);
 
   return (
     <div className="flex flex-col justify-center md:items-start items-center md:mx-5 md:my-0 mx-0 my-5">
       <h1 className="lg:text-7xl sm:text-6xl text-5xl font-bold m-1">
-        <span>{contents.greetings}</span>
-        <span className="text-primary">{contents.name}</span>
+        <span>Hi, I'm </span>
+        <span className="text-primary">{home.nickname}</span>
       </h1>
       <p className="lg:text-3xl sm:text-2xl text-xl text-secondary-light dark:text-secondary-dark font-medium italic m-1">
         {text}
@@ -52,7 +53,7 @@ const Avatar = () => {
         <div className="flex flex-col justify-center items-center absolute inset-[12px] z-10 rounded-full overflow-hidden cursor-pointer">
           <img
             className="size-full absolute top-0 left-0 object-cover bg-dark dark:bg-light transition-opacity duration-500 hover:opacity-0"
-            src={contents.image}
+            src={avatar}
             alt="avatar"
           />
           <p className="size-full flex justify-center items-center bg-dark dark:bg-light text-primary text-center text-xl font-bold">

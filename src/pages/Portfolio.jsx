@@ -1,159 +1,16 @@
-import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  FaAngleLeft,
-  FaAngleRight,
-  FaPlayCircle,
-  FaGithub,
-} from "react-icons/fa";
+import { FaPlayCircle, FaGithub } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 import PageTitle from "../components/PageTitle";
-import PageHeading2 from "../components/PageHeading2";
-import PageEmphasis2 from "../components/PageEmphasis2";
-import PageContent2 from "../components/PageContent2";
 import LinkButton from "../components/LinkButton";
-import { contents, projects } from "../assets/contents/portfolio";
+import { portfolio } from "../assets/contents/contents";
+import { projects } from "../assets/contents/projects";
 
 const Portfolio = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(6);
-  const [imgLoading, setImgLoading] = useState(true);
-
-  useEffect(() => {
-    const updateItemsPerPage = () => {
-      const screenWidth = window.innerWidth;
-      let calculatedItemsPerPage;
-
-      if (screenWidth >= 1280) {
-        calculatedItemsPerPage = 6;
-      } else if (screenWidth >= 768) {
-        calculatedItemsPerPage = 3;
-      } else {
-        calculatedItemsPerPage = 2;
-      }
-
-      setItemsPerPage(calculatedItemsPerPage);
-    };
-
-    updateItemsPerPage();
-    window.addEventListener("resize", updateItemsPerPage);
-
-    return () => {
-      window.removeEventListener("resize", updateItemsPerPage);
-    };
-  }, []);
-
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = projects.slice(indexOfFirstItem, indexOfLastItem);
-  const totalPages = Math.ceil(projects.length / itemsPerPage);
-
-  const getPageNumbers = () => {
-    const maxButtons = 5;
-    let startPage = Math.max(1, currentPage - Math.floor(maxButtons / 2));
-    let endPage = startPage + maxButtons - 1;
-
-    if (endPage > totalPages) {
-      endPage = totalPages;
-      startPage = Math.max(1, endPage - maxButtons + 1);
-    }
-
-    const pageNumbers = [];
-    for (let i = startPage; i <= endPage; i++) {
-      pageNumbers.push(i);
-    }
-    return pageNumbers;
-  };
-
-  const Collage = () => {
-    return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-2">
-        {currentItems.map((item, index) => (
-          <div
-            key={index}
-            className={`max-w-72 w-full h-40 md:h-56 bg-gray-800 dark:bg-gray-200 border-2 border-primary relative group 
-              transition-opacity duration-500 ${
-                imgLoading ? "opacity-0" : "opacity-100"
-              }`}
-          >
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-full object-cover"
-              onLoad={() => setImgLoading(false)}
-            />
-            <div
-              className="w-full absolute bottom-0 left-0 opacity-85 bg-gray-200 dark:bg-gray-800
-              text-dark dark:text-light text-center font-semibold p-2"
-            >
-              {item.name}
-            </div>
-            <div
-              className="flex flex-col justify-center items-center absolute inset-0 bg-gray-200 dark:bg-gray-800 p-4 
-                opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
-            >
-              <PageHeading2>{item.name}</PageHeading2>
-              <PageEmphasis2>{item.category}</PageEmphasis2>
-              <PageContent2>{item.details}</PageContent2>
-              <div className="flex space-x-2 mt-4">
-                {item.github && (
-                  <LinkButton href={item.github}>
-                    <FaGithub size={24} />
-                  </LinkButton>
-                )}
-                {item.demo && (
-                  <LinkButton href={item.demo}>
-                    <FaPlayCircle size={24} />
-                  </LinkButton>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  };
-
-  const Pagination = () => {
-    return (
-      <div className="flex justify-center mt-4 space-x-2">
-        <button
-          onClick={() =>
-            currentPage > 1 ? setCurrentPage(currentPage - 1) : null
-          }
-          className="md:text-md text-sm font-semibold bg-gray-300 text-gray-800 hover:bg-primary hover:text-white rounded-full shadow-md mx-1 px-3 py-1 
-             opacity-90 transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-25 disabled:cursor-not-allowed"
-          disabled={currentPage === 1}
-        >
-          <FaAngleLeft />
-        </button>
-        {getPageNumbers().map((pageNumber) => (
-          <button
-            key={pageNumber}
-            onClick={() => setCurrentPage(pageNumber)}
-            className={`md:text-md text-sm font-semibold hover:bg-primary hover:text-white rounded-full shadow-md mx-1 px-3 py-1  
-               opacity-90 transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-25 disabled:cursor-not-allowed ${
-                 currentPage === pageNumber
-                   ? "bg-primary text-gray-200"
-                   : "bg-gray-300 text-gray-800"
-               }`}
-          >
-            {pageNumber}
-          </button>
-        ))}
-        <button
-          onClick={() =>
-            currentPage < totalPages ? setCurrentPage(currentPage + 1) : null
-          }
-          className="md:text-md text-sm font-semibold bg-gray-300 text-gray-800 hover:bg-primary hover:text-white rounded-full shadow-md mx-1 px-3 py-1 
-             opacity-90 transition duration-300 ease-in-out transform hover:scale-105 disabled:opacity-25 disabled:cursor-not-allowed"
-          disabled={currentPage === totalPages}
-        >
-          <FaAngleRight />
-        </button>
-      </div>
-    );
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, x: -100 }}
@@ -162,15 +19,67 @@ const Portfolio = () => {
       transition={{ duration: 0.5, type: "tween", ease: "easeInOut" }}
       className="w-full h-full flex flex-col justify-center items-center"
     >
-      <PageTitle
-        title={contents.title.toUpperCase()}
-        subtitle={contents.subtitle}
-      />
-      <div className="p-4">
-        <Collage />
-        <Pagination />
+      <div className="lg:w-4/5 md:w-3/4 min-w-80 h-full flex flex-col justify-center items-center animate-float">
+        <PageTitle title={portfolio.title} subtitle={portfolio.subtitle} />
+        <Projects />
       </div>
     </motion.div>
+  );
+};
+
+const Projects = () => {
+  return (
+    <Swiper
+      effect={"coverflow"}
+      grabCursor={true}
+      centeredSlides={true}
+      slidesPerView={"auto"}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }}
+      pagination={true}
+      autoplay={{
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+        pauseOnTouchStart: true,
+      }}
+      loop={true}
+      modules={[EffectCoverflow, Pagination, Autoplay]}
+      className="w-2/3 flex flex-col justify-center items-center p-6"
+    >
+      {projects.map((item, index) => (
+        <SwiperSlide key={index} className="size-72 relative group">
+          <div className="relative w-full h-full border-2 border-primary rounded-2xl">
+            <img
+              src={item.image}
+              className="w-full h-full object-cover rounded-2xl"
+              alt={item.name}
+            />
+            <div
+              className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-800 dark:text-gray-200 rounded-2xl
+            bg-white dark:bg-black bg-opacity-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4"
+            >
+              <h3 className="text-lg font-bold">{item.name}</h3>
+              <p className="text-sm">{item.category}</p>
+              <p className="text-xs mt-2">{item.details}</p>
+              <div className="mt-4 flex space-x-2">
+                <LinkButton href={item.github}>
+                  <FaGithub size={28} />
+                </LinkButton>
+                <LinkButton href={item.demo}>
+                  <FaPlayCircle size={28} />
+                </LinkButton>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 

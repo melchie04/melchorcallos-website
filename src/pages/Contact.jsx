@@ -5,7 +5,7 @@ import { LuSend } from "react-icons/lu";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PageTitle from "../components/PageTitle";
-import { contents } from "../assets/contents/contact";
+import { contact } from "../assets/contents/contents";
 
 const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 const serviceId = import.meta.env.VITE_SERVICE_ID;
@@ -24,8 +24,8 @@ const Contact = () => {
     >
       <div className="lg:w-1/3 md:w-1/2 min-w-80 h-full flex flex-col justify-center items-center animate-float">
         <PageTitle
-          title={contents.title.toUpperCase()}
-          subtitle={contents.subtitle}
+          title={contact.title}
+          subtitle={contact.subtitle}
         />
         <Form />
       </div>

@@ -6,7 +6,7 @@ const LinkButton = ({ children, href }) => {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary mx-2 hover:scale-125 duration-300"
+          className="text-secondary-light dark:text-secondary-dark mx-2 hover:scale-125 duration-300"
         >
           {children}
         </a>

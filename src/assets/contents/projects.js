@@ -1,12 +1,7 @@
-import eatwellwebsite from "../images/projects/eatwellwebsite.jpg";
-import gifsharewebsite from "../images/projects/gifsharewebsite.jpg";
-import onlinepalabawebsite from "../images/projects/onlinepalabawebsite.jpg";
-import chowviwebsite from "../images/projects/chowviwebsite.jpg";
-
-export const contents = {
-  title: "My Projects",
-  subtitle: "What Have I Developed?",
-};
+import eatwellwebsite from "../images/project/eatwellwebsite.jpg";
+import gifsharewebsite from "../images/project/gifsharewebsite.jpg";
+import onlinepalabawebsite from "../images/project/onlinepalabawebsite.jpg";
+import chowviwebsite from "../images/project/chowviwebsite.jpg";
 
 export const projects = [
   {

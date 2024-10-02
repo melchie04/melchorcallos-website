@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { contents } from "../assets/contents/loader";
+import { loader } from "../assets/contents/images";
 
 const Preloader = () => {
   return (
@@ -9,9 +9,9 @@ const Preloader = () => {
       transition={{ duration: 1 }}
       className="min-h-screen flex flex-col justify-center items-center overflow-hidden"
     >
-      <img src={contents.loader} className="w-40" alt="Loader" />
+      <img src={loader} className="w-40" alt="Loader" />
       <h1 className="xs:text-3xl text-2xl font-bold text-primary text-center animate-pulse">
-        {contents.greetings.toUpperCase()}
+        WELCOME TO MY WEBSITE.
       </h1>
     </motion.div>
   );

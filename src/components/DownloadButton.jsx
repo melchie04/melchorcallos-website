@@ -1,4 +1,4 @@
-import { contents } from "../assets/contents/loader";
+import { loader } from "../assets/contents/images";
 
 const DownloadButton = () => {
   const handleDownload = () => {
@@ -18,7 +18,7 @@ const DownloadButton = () => {
         className="flex items-center font-bold text-primary text-xl hover:animate-shake mx-4 my-2"
         onClick={handleDownload}
       >
-        <img src={contents.loader} className="h-14" />
+        <img src={loader} className="h-14" />
         <span className="hidden sm:inline mr-2">DOWNLOAD</span>
         <span>CV</span>
       </button>

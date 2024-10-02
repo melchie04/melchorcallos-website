@@ -5,7 +5,7 @@ const PageTitle = ({ title, subtitle }) => {
         {subtitle}
       </p>
       <h1 className="lg:text-5xl sm:text-4xl xs:text-3xl text-2xl text-primary font-bold my-1">
-        {title}
+        {title.toUpperCase()}
       </h1>
     </div>
   );

@@ -4,7 +4,8 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { useDarkMode } from "../providers/DarkModeProvider";
 import { usePageControl } from "../providers/PageControlProvider";
-import { contents } from "../assets/contents/navigation";
+import { pages } from "../assets/contents/contents";
+import { logo } from "../assets/contents/images";
 
 const NavBar = () => {
   const { darkMode, setDarkMode } = useDarkMode();
@@ -17,7 +18,7 @@ const NavBar = () => {
         <Link to="/" onClick={() => setActivePage("/")}>
           <img
             className="w-20 h-auto object-cover"
-            src={contents.logo}
+            src={logo}
             alt="MC"
           />
         </Link>
@@ -36,7 +37,7 @@ const NavBar = () => {
           transition-opacity duration-500 ease-in-out
           ${openMenu ? "top-28 opacity-100" : "top-[-500px] opacity-0"}`}
       >
-        {contents.links.map((link, index) => (
+        {pages.map((link, index) => (
           <li
             key={index}
             className="text-xs font-bold md:mx-5 md:my-0 mx-0 my-5"

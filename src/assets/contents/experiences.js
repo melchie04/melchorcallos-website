@@ -1,12 +1,7 @@
-import jiomhw from "../images/experiences/jiomhw.png";
-import vertere from "../images/experiences/vertere.png";
-import aaisi from "../images/experiences/aaisi.png";
-import leekie from "../images/experiences/leekie.png";
-
-export const contents = {
-  title: "My Experience",
-  subtitle: "What Roles Have I Held?",
-};
+import jiomhw from "../images/company/jiomhw.png";
+import vertere from "../images/company/vertere.png";
+import aaisi from "../images/company/aaisi.png";
+import leekie from "../images/company/leekie.png";
 
 export const experiences = [
   {

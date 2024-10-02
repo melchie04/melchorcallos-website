@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaLinkedin, FaGithub, FaFacebook, FaPlus } from "react-icons/fa";
-import { links } from "../assets/contents/about";
+import { socials } from "../assets/contents/contents";
 
 const SocialMenu = () => {
   const [openSocialMenu, setOpenSocialMenu] = useState(false);
@@ -15,13 +15,13 @@ const SocialMenu = () => {
               : "opacity-0 md:translate-y-5 -translate-x-5 hidden"
           }`}
       >
-        <RoundButton href={links.linkedin}>
+        <RoundButton href={socials.linkedin}>
           <FaLinkedin />
         </RoundButton>
-        <RoundButton href={links.github}>
+        <RoundButton href={socials.github}>
           <FaGithub />
         </RoundButton>
-        <RoundButton href={links.facebook}>
+        <RoundButton href={socials.facebook}>
           <FaFacebook />
         </RoundButton>
       </div>
