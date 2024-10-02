@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaPlayCircle, FaGithub } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -23,6 +23,9 @@ const Portfolio = () => {
       <div className="lg:w-4/5 md:w-3/4 min-w-80 h-full flex flex-col justify-center items-center animate-float">
         <PageTitle title={portfolio.title} subtitle={portfolio.subtitle} />
         <Projects />
+        <p className="text-gray-600 dark:text-gray-300">
+          Swipe left or right to explore more projects!
+        </p>
       </div>
     </motion.div>
   );
@@ -44,9 +47,6 @@ const Projects = () => {
         modifier: 1,
         slideShadows: true,
       }}
-      pagination={{
-        clickable: true,
-      }}
       autoplay={{
         delay: 2000,
         disableOnInteraction: false,
@@ -54,7 +54,7 @@ const Projects = () => {
         pauseOnTouchStart: true,
       }}
       loop={true}
-      modules={[EffectCoverflow, Pagination, Autoplay]}
+      modules={[EffectCoverflow, Autoplay]}
       className="w-2/3 flex flex-col justify-center items-center p-6"
     >
       {projects.map((item, index) => (
@@ -70,7 +70,7 @@ const Projects = () => {
             />
             <div
               className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-800 dark:text-gray-200 rounded-2xl
-            bg-white dark:bg-black bg-opacity-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4"
+              bg-white dark:bg-black bg-opacity-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4"
             >
               <h3 className="text-lg font-bold">{item.name}</h3>
               <p className="text-sm">{item.category}</p>
