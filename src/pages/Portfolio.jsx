@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaPlayCircle, FaGithub } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -28,6 +29,8 @@ const Portfolio = () => {
 };
 
 const Projects = () => {
+  const [imgLoading, setImgLoading] = useState(true);
+
   return (
     <Swiper
       effect={"coverflow"}
@@ -57,8 +60,11 @@ const Projects = () => {
           <div className="relative w-full h-full border-2 border-primary rounded-2xl">
             <img
               src={item.image}
-              className="w-full h-full object-cover rounded-2xl"
+              className={`w-full h-full object-cover rounded-2xl transition-opacity duration-500 ${
+                imgLoading ? "opacity-0" : "opacity-100"
+              }`}
               alt={item.name}
+              onLoad={() => setImgLoading(false)}
             />
             <div
               className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-800 dark:text-gray-200 rounded-2xl
