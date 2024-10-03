@@ -84,7 +84,7 @@ const Form = () => {
 
   return (
     <form
-      className="w-full flex flex-col justify-center items-center p-6 space-y-3"
+      className="w-full flex flex-col justify-center items-center px-6 space-y-3"
       onSubmit={sendEmail}
     >
       <input
