@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 import { usePageControl } from "../providers/PageControlProvider";
 import PageTitle from "../components/PageTitle";
 import LinkButton from "../components/LinkButton";
@@ -14,6 +13,8 @@ import { portfolio } from "../assets/contents/contents";
 import { projects } from "../assets/contents/projects";
 
 const Portfolio = () => {
+  const { setActivePage } = usePageControl();
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -100 }}
@@ -38,7 +39,6 @@ const Portfolio = () => {
 };
 
 const Projects = () => {
-  const { setActivePage } = usePageControl();
   const [imgLoading, setImgLoading] = useState(true);
 
   return (
@@ -56,7 +56,7 @@ const Projects = () => {
       }}
       autoplay={{
         delay: 2000,
-        disableOnInteraction: true,
+        disableOnInteraction: false,
         pauseOnMouseEnter: true,
         pauseOnTouchStart: true,
       }}
