@@ -62,12 +62,12 @@ const Projects = () => {
       }}
       loop={true}
       modules={[EffectCoverflow, Autoplay]}
-      className="w-2/3 flex flex-col justify-center items-center"
+      className="w-2/3 flex flex-col justify-center items-center pb-4"
     >
       {projects.map((item, index) => (
         <SwiperSlide key={index} className="size-72 relative group">
           <div
-            className={`relative w-full h-full rounded-2xl card transition-opacity duration-500 ${
+            className={`relative w-full h-full rounded-2xl swiper-slide-shadow transition-opacity duration-500 ${
               imgLoading ? "opacity-0" : "opacity-100"
             }`}
           >

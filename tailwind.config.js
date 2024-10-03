@@ -72,8 +72,7 @@ export default {
           scrollbarWidth: "thin",
           scrollbarColor: "#1ba098 transparent",
         },
-        ".card": {
-          background: "rgb(236, 236, 236)",
+        ".swiper-slide-shadow": {
           boxShadow:
             "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
         },
