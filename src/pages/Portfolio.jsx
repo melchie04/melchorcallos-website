@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaPlayCircle, FaGithub } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,6 +7,7 @@ import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import { usePageControl } from "../providers/PageControlProvider";
 import PageTitle from "../components/PageTitle";
 import LinkButton from "../components/LinkButton";
 import { portfolio } from "../assets/contents/contents";
@@ -23,15 +25,20 @@ const Portfolio = () => {
       <div className="lg:w-4/5 md:w-3/4 min-w-80 h-full flex flex-col justify-center items-center animate-float">
         <PageTitle title={portfolio.title} subtitle={portfolio.subtitle} />
         <Projects />
-        <p className="text-gray-600 dark:text-gray-300">
-          Swipe left or right to explore more projects!
-        </p>
+        <Link
+          className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary underline underline-offset-4 py-3"
+          to="/projects"
+          onClick={() => setActivePage("/projects")}
+        >
+          Click here to explore more projects!
+        </Link>
       </div>
     </motion.div>
   );
 };
 
 const Projects = () => {
+  const { setActivePage } = usePageControl();
   const [imgLoading, setImgLoading] = useState(true);
 
   return (
@@ -55,16 +62,18 @@ const Projects = () => {
       }}
       loop={true}
       modules={[EffectCoverflow, Autoplay]}
-      className="w-2/3 flex flex-col justify-center items-center p-6"
+      className="w-2/3 flex flex-col justify-center items-center"
     >
       {projects.map((item, index) => (
         <SwiperSlide key={index} className="size-72 relative group">
-          <div className="relative w-full h-full border-2 border-primary rounded-2xl">
+          <div
+            className={`relative w-full h-full border-2 border-primary rounded-2xl transition-opacity duration-500 ${
+              imgLoading ? "opacity-0" : "opacity-100"
+            }`}
+          >
             <img
               src={item.image}
-              className={`w-full h-full object-cover rounded-2xl transition-opacity duration-500 ${
-                imgLoading ? "opacity-0" : "opacity-100"
-              }`}
+              className="w-full h-full object-cover rounded-2xl"
               alt={item.name}
               onLoad={() => setImgLoading(false)}
             />
