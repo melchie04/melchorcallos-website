@@ -27,7 +27,7 @@ const Portfolio = () => {
         <PageTitle title={portfolio.title} subtitle={portfolio.subtitle} />
         <Projects />
         <Link
-          className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary underline underline-offset-4 py-3"
+          className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary underline underline-offset-4 pb-3"
           to="/projects"
           onClick={() => setActivePage("/projects")}
         >
