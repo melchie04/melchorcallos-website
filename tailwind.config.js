@@ -25,13 +25,13 @@ export default {
           "100%": { transform: "rotate(360deg)" },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
       },
       animation: {
         shake: "shake 0.3s infinite",
-        float: 'float 3s ease-in-out infinite',
+        float: "float 3s ease-in-out infinite",
       },
     },
   },
@@ -71,6 +71,11 @@ export default {
         ".custom-scrollbar": {
           scrollbarWidth: "thin",
           scrollbarColor: "#1ba098 transparent",
+        },
+        ".card": {
+          background: "rgb(236, 236, 236)",
+          boxShadow:
+            "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
         },
       });
     },
