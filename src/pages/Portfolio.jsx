@@ -67,7 +67,7 @@ const Projects = () => {
       {projects.map((item, index) => (
         <SwiperSlide key={index} className="size-72 relative group">
           <div
-            className={`relative w-full h-full border-2 border-primary rounded-2xl transition-opacity duration-500 ${
+            className={`relative w-full h-full rounded-2xl transition-opacity duration-500 ${
               imgLoading ? "opacity-0" : "opacity-100"
             }`}
           >
