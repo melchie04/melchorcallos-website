@@ -10,7 +10,7 @@ export const experiences = [
     icon: leekie,
     date: "July 2023 - Present",
     description:
-      "I performed functional testing to ensure the software met requirements, enhanced testing efficiency by automating test scripts, and executed tests for websites and games across desktop and mobile browsers. I analyzed test results for accuracy and issues, reported findings to ensure software quality, and utilized tools such as Java, Selenium, Cucumber, Appium, and Maven.",
+      "As an automation tester, I ensured software met requirements through functional testing, automated test scripts to boost efficiency, and tested websites and games on various browsers. I analyzed results, reported issues, and used tools like Java, Selenium, Cucumber, Appium, and Maven.",
   },
   {
     position: "Software Quality Assurance Engineer",
@@ -18,7 +18,7 @@ export const experiences = [
     icon: aaisi,
     date: "August 2019 - August 2021",
     description:
-      "I worked as a unit tester, performing white-box testing using C++, WinAMS, and MS Excel. I created and executed test cases, reported bugs, and ensured software quality. Additionally, I participated in a bootcamp where I learned Java, Selenium, UFT, and ALM, gaining experience in both functional and automated testing.",
+      "As a unit tester, I performed white-box testing with C++, WinAMS, and MS Excel, creating and executing test cases, reporting bugs, and ensuring software quality. I also attended a bootcamp where I learned Java, Selenium, UFT, and ALM, gaining experience in both functional and automated testing.",
   },
   {
     position: "Programmer Analyst",
@@ -26,7 +26,7 @@ export const experiences = [
     icon: vertere,
     date: "Jan 2021 - Feb 2022",
     description:
-      "I participated in a bootcamp where I learned COBOL, JCL, and DB2, gaining hands-on experience in mainframe programming.",
+      "I participated in a bootcamp where I learned COBOL programming, JCL scripting, and DB2 database management, enhancing my technical skills and understanding of mainframe systems.",
   },
   {
     position: "Research & Development Programmer",
