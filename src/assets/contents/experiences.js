@@ -10,7 +10,7 @@ export const experiences = [
     icon: leekie,
     date: "July 2023 - Present",
     description:
-      "As an automation tester, I ensured software met requirements through functional testing, automated test scripts to boost efficiency, and tested websites and games on various browsers. I analyzed results, reported issues, and used tools like Java, Selenium, Cucumber, Appium, and Maven.",
+      "I ensured software met requirements through functional testing, automated test scripts to boost efficiency, and tested websites and games on various browsers. I analyzed results, reported issues, and used tools like Java, Selenium, Cucumber, Appium, and Maven.",
   },
   {
     position: "Software Quality Assurance Engineer",
@@ -18,7 +18,7 @@ export const experiences = [
     icon: aaisi,
     date: "August 2019 - August 2021",
     description:
-      "As a unit tester, I performed white-box testing with C++, WinAMS, and MS Excel, creating and executing test cases, reporting bugs, and ensuring software quality. I also attended a bootcamp where I learned Java, Selenium, UFT, and ALM, gaining experience in both functional and automated testing.",
+      "I performed white-box testing with C++, WinAMS, and MS Excel, creating and executing test cases, reporting bugs, and ensuring software quality. I also attended a bootcamp where I learned Java, Selenium, UFT, and ALM, gaining experience in both functional and automated testing.",
   },
   {
     position: "Programmer Analyst",
