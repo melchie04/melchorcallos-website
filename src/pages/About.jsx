@@ -12,10 +12,9 @@ const About = () => {
       transition={{ duration: 0.5, type: "tween", ease: "easeInOut" }}
       className="w-full h-full flex flex-col justify-center items-center"
     >
-      <PageTitle
-        title={about.title}
-        subtitle={about.subtitle}
-      />
+      <div className="lg:w-4/5 md:w-3/4 min-w-80 h-full flex flex-col justify-center items-center animate-float">
+        <PageTitle title={about.title} subtitle={about.subtitle} />
+      </div>
     </motion.div>
   );
 };
