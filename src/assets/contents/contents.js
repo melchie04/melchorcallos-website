@@ -18,10 +18,10 @@ export const home = {
 export const about = {
   title: "About Me",
   subtitle: "Who Am I?",
-  name: "Melchor Bendanillo Callos",
+  name: "Melchor B. Callos",
   position: "Website Developer / Software Tester",
   description:
-    " I'm a passionate developer and experienced tester based in the Philippines, specializing in automation testing and website development. I also have expertise in white-box and functional testing. My love for programming drives me to continually enhance my skills, and I find great fulfillment in developing websites.",
+    "Welcome to my website! I am Melchor B. Callos, a passionate developer and experienced tester from the Philippines. I specialize in automation testing and website development, with expertise in white-box and functional testing. My love for programming drives me to continually enhance my skills, and I find great fulfillment in creating software that people find useful.",
 };
 
 export const socials = {
