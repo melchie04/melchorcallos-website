@@ -9,6 +9,7 @@ import PageTitle from "../components/PageTitle";
 import { about, socials } from "../assets/contents/contents";
 import { profile } from "../assets/contents/images";
 import { experiences } from "../assets/contents/experiences";
+import { skills } from "../assets/contents/skills";
 
 const About = () => {
   return (
@@ -70,7 +71,7 @@ const Cards = () => {
           </div>
         </div>
       </SwiperSlide>
-      {experiences.map((item, index) => (
+      {experiences.map((experience, index) => (
         <SwiperSlide
           key={index}
           className="flex items-center justify-center rounded-2xl bg-gray-200 dark:bg-gray-800"
@@ -78,18 +79,22 @@ const Cards = () => {
           <div className="w-full h-full rounded-2xl outline outline-primary -outline-offset-8 overflow-hidden">
             <div className="h-1/3 flex justify-center items-center border-b-2 border-gray-300 dark:border-gray-700 px-6">
               <img
-                src={item.icon}
-                alt={item.company}
+                src={experience.icon}
+                alt={experience.company}
                 className="size-8 rounded-full bg-gray-200 border-2 border-primary mr-4"
               />
               <div>
-                <h2 className="text-xs font-bold">{item.company}</h2>
-                <p className="text-xs">{item.date}</p>
+                <h2 className="text-xs font-bold">{experience.company}</h2>
+                <p className="text-xs">{experience.date}</p>
               </div>
             </div>
             <div className="px-6 pb-6 pt-3">
-              <h3 className="text-xs font-semibold mb-2">{item.position}</h3>
-              <p className="text-xs text-gray-700 dark:text-gray-300">{item.description}</p>
+              <h3 className="text-xs font-semibold mb-2">
+                {experience.position}
+              </h3>
+              <p className="text-xs text-gray-700 dark:text-gray-300">
+                {experience.description}
+              </p>
             </div>
           </div>
         </SwiperSlide>
