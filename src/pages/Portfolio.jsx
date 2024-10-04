@@ -84,7 +84,7 @@ const Projects = () => {
               <h3 className="text-lg font-bold">{item.name}</h3>
               <p className="text-sm">{item.category}</p>
               <p className="text-xs mt-2">{item.details}</p>
-              <div className="mt-4 flex space-x-2">
+              <div className="flex flex-row justify-center items-center mt-4 pointer-events-auto">
                 <LinkButton href={item.github}>
                   <FaGithub size={28} />
                 </LinkButton>
