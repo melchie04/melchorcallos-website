@@ -26,13 +26,13 @@ const Portfolio = () => {
       <div className="lg:w-4/5 md:w-3/4 min-w-80 h-full flex flex-col justify-center items-center animate-float">
         <PageTitle title={portfolio.title} subtitle={portfolio.subtitle} />
         <Projects />
-        <Link
-          className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary underline underline-offset-4 pb-3"
+        {/* <Link
+          className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary underline underline-offset-4 pb-3"
           to="/projects"
           onClick={() => setActivePage("/projects")}
         >
           Click here to explore more projects!
-        </Link>
+        </Link> */}
       </div>
     </motion.div>
   );
