@@ -24,7 +24,7 @@ const About = () => {
       <div className="lg:w-4/5 md:w-3/4 min-w-80 h-full flex flex-col justify-center items-center animate-float">
         <PageTitle title={about.title} subtitle={about.subtitle} />
         <Cards />
-        <p className="text-gray-600 dark:text-gray-300 pb-3">
+        <p className="text-gray-600 dark:text-gray-400 pb-3">
           Swipe left to learn more about me!
         </p>
       </div>
@@ -90,7 +90,9 @@ const Cards = () => {
                 className="xl:size-12 size-8 rounded-full bg-gray-200 border-2 border-primary mr-4"
               />
               <div>
-                <h2 className="xl:text-sm text-xs font-bold">{experience.company}</h2>
+                <h2 className="xl:text-sm text-xs font-bold">
+                  {experience.company}
+                </h2>
                 <p className="xl:text-sm text-xs">{experience.date}</p>
               </div>
             </div>
