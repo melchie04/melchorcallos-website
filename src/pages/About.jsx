@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaLinkedin, FaFacebookSquare, FaGithubSquare } from "react-icons/fa";
@@ -32,13 +33,17 @@ const About = () => {
 };
 
 const Cards = () => {
+  const [imgLoading, setImgLoading] = useState(true);
+
   return (
     <Swiper
       effect={"cards"}
       grabCursor={true}
       modules={[EffectCards]}
       loop={true}
-      className="w-60 h-[350px] flex flex-col justify-center items-center pb-4"
+      className={`xl:w-[300px] xl:h-[400px] w-60 h-80 flex flex-col justify-center items-center pb-4 transition-opacity duration-500 ${
+        imgLoading ? "opacity-0" : "opacity-100"
+      }`}
     >
       <SwiperSlide className="flex items-center justify-center rounded-2xl bg-gray-200 dark:bg-gray-800">
         <div className="w-full h-full rounded-2xl outline outline-primary -outline-offset-8 overflow-hidden">
@@ -46,17 +51,18 @@ const Cards = () => {
             src={profile}
             alt="Profile"
             className="w-full h-full object-cover"
+            onLoad={() => setImgLoading(false)}
           />
           <div className="absolute bottom-0 w-full bg-white dark:bg-black bg-opacity-75 dark:bg-opacity-75 text-center p-6 pt-4">
-            <h2 className="text-sm font-bold">{about.name}</h2>
-            <p className="text-xs">{about.position}</p>
+            <h2 className="xl:text-base text-sm font-bold">{about.name}</h2>
+            <p className="xl:text-sm text-xs">{about.position}</p>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide className="flex items-center justify-center rounded-2xl bg-gray-200 dark:bg-gray-800">
         <div className="w-full h-full rounded-2xl outline outline-primary -outline-offset-8 overflow-hidden">
           <div className="w-full h-full flex flex-col justify-center items-center text-center p-6">
-            <p className="text-xs">{about.description}</p>
+            <p className="xl:text-sm text-xs">{about.description}</p>
             <div className="flex flex-row justify-center items-center mt-4">
               <LinkButton href={socials.facebook}>
                 <FaFacebookSquare size={28} />
@@ -81,18 +87,18 @@ const Cards = () => {
               <img
                 src={experience.icon}
                 alt={experience.company}
-                className="size-8 rounded-full bg-gray-200 border-2 border-primary mr-4"
+                className="xl:size-12 size-8 rounded-full bg-gray-200 border-2 border-primary mr-4"
               />
               <div>
-                <h2 className="text-xs font-bold">{experience.company}</h2>
-                <p className="text-xs">{experience.date}</p>
+                <h2 className="xl:text-sm text-xs font-bold">{experience.company}</h2>
+                <p className="xl:text-sm text-xs">{experience.date}</p>
               </div>
             </div>
             <div className="px-6 pb-6 pt-3">
-              <h3 className="text-xs font-semibold mb-2">
+              <h3 className="xl:text-sm text-xs font-semibold mb-2">
                 {experience.position}
               </h3>
-              <p className="text-xs text-gray-700 dark:text-gray-300">
+              <p className="xl:text-sm text-xs text-gray-700 dark:text-gray-300">
                 {experience.description}
               </p>
             </div>

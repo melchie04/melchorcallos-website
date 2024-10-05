@@ -62,15 +62,13 @@ const Projects = () => {
       }}
       loop={true}
       modules={[EffectCoverflow, Autoplay]}
-      className="w-2/3 flex flex-col justify-center items-center pb-4"
+      className={`w-2/3 flex flex-col justify-center items-center pb-4 transition-opacity duration-500 ${
+        imgLoading ? "opacity-0" : "opacity-100"
+      }`}
     >
       {projects.map((item, index) => (
-        <SwiperSlide key={index} className="size-72 relative group">
-          <div
-            className={`relative w-full h-full rounded-2xl swiper-slide-shadow transition-opacity duration-500 ${
-              imgLoading ? "opacity-0" : "opacity-100"
-            }`}
-          >
+        <SwiperSlide key={index} className="xl:size-80 size-72 relative group">
+          <div className="relative w-full h-full rounded-2xl swiper-slide-shadow">
             <img
               src={item.image}
               className="w-full h-full object-cover rounded-2xl"
@@ -81,9 +79,9 @@ const Projects = () => {
               className="absolute inset-0 flex flex-col justify-center items-center text-center text-gray-800 dark:text-gray-200 rounded-2xl
               bg-white dark:bg-black bg-opacity-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4"
             >
-              <h3 className="text-lg font-bold">{item.name}</h3>
-              <p className="text-sm">{item.category}</p>
-              <p className="text-xs mt-2">{item.details}</p>
+              <h3 className="xl:text-xl text-lg font-bold">{item.name}</h3>
+              <p className="xl:text-base text-sm">{item.category}</p>
+              <p className="xl:text-sm text-xs mt-2">{item.details}</p>
               <div className="flex flex-row justify-center items-center mt-4 pointer-events-auto">
                 <LinkButton href={item.github}>
                   <FaGithub size={28} />

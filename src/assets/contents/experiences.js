@@ -18,7 +18,7 @@ export const experiences = [
     icon: aaisi,
     date: "August 2019 - August 2021",
     description:
-      "I performed white-box testing with C++, WinAMS, and MS Excel, creating and executing test cases, reporting bugs, and ensuring software quality. I also attended a bootcamp where I learned Java, Selenium, UFT, and ALM, gaining experience in both functional and automated testing.",
+      "I performed white-box testing using C++, WinAMS, and MS Excel, handling test cases, bug reporting, and software quality assurance. Additionally, I attended a bootcamp where I learned Java, Selenium, UFT, and ALM, gaining experience in functional and automated testing.",
   },
   {
     position: "Programmer Analyst",
