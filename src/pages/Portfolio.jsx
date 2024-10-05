@@ -23,7 +23,7 @@ const Portfolio = () => {
       transition={{ duration: 0.5, type: "tween", ease: "easeInOut" }}
       className="w-full h-full flex flex-col justify-center items-center"
     >
-      <div className="lg:w-4/5 md:w-3/4 min-w-80 h-full flex flex-col justify-center items-center animate-float">
+      <div className="xl:w-5/6 lg:w-4/5 md:w-3/4 min-w-80 h-full flex flex-col justify-center items-center animate-float">
         <PageTitle title={portfolio.title} subtitle={portfolio.subtitle} />
         <Projects />
         {/* <Link
