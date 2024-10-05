@@ -10,7 +10,12 @@ import PageTitle from "../components/PageTitle";
 import { about, socials } from "../assets/contents/contents";
 import { profile } from "../assets/contents/images";
 import { experiences } from "../assets/contents/experiences";
-import { skills } from "../assets/contents/skills";
+import {
+  programming,
+  testing,
+  webdev,
+  others,
+} from "../assets/contents/skills";
 
 const About = () => {
   return (
@@ -79,8 +84,100 @@ const Cards = () => {
       </SwiperSlide>
       <SwiperSlide className="flex items-center justify-center rounded-2xl bg-gray-200 dark:bg-gray-800">
         <div className="w-full h-full rounded-2xl outline outline-primary -outline-offset-8 overflow-hidden">
+          <div className="p-6">
+            <h2 className="xl:text-base text-sm font-bold mb-4">My Programming Skills</h2>
+            <ul className="space-y-4">
+              {programming.map((skill) => (
+                <li key={skill.name}>
+                  <div className="flex justify-between xl:text-sm text-xs mb-1">
+                    <span>{skill.name}</span>
+                    <span>{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-gray-300 rounded-full h-1 dark:bg-gray-700">
+                    <div
+                      className={`${skill.color} h-1 rounded-full`}
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="flex items-center justify-center rounded-2xl bg-gray-200 dark:bg-gray-800">
+        <div className="w-full h-full rounded-2xl outline outline-primary -outline-offset-8 overflow-hidden">
+          <div className="p-6">
+            <h2 className="xl:text-base text-sm font-bold mb-4">My Automation Test Skills</h2>
+            <ul className="space-y-2">
+              {testing.map((skill) => (
+                <li key={skill.name}>
+                  <div className="flex justify-between xl:text-sm text-xs mb-1">
+                    <span>{skill.name}</span>
+                    <span>{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-gray-300 rounded-full h-1 dark:bg-gray-700">
+                    <div
+                      className={`${skill.color} h-1 rounded-full`}
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="flex items-center justify-center rounded-2xl bg-gray-200 dark:bg-gray-800">
+        <div className="w-full h-full rounded-2xl outline outline-primary -outline-offset-8 overflow-hidden">
+          <div className="p-6">
+            <h2 className="xl:text-base text-sm font-bold mb-4">My Web Development Skills</h2>
+            <ul className="space-y-2">
+              {webdev.map((skill) => (
+                <li key={skill.name}>
+                  <div className="flex justify-between xl:text-sm text-xs mb-1">
+                    <span>{skill.name}</span>
+                    <span>{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-gray-300 rounded-full h-1 dark:bg-gray-700">
+                    <div
+                      className={`${skill.color} h-1 rounded-full`}
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="flex items-center justify-center rounded-2xl bg-gray-200 dark:bg-gray-800">
+        <div className="w-full h-full rounded-2xl outline outline-primary -outline-offset-8 overflow-hidden">
+          <div className="p-6">
+            <h2 className="xl:text-base text-sm font-bold mb-4">My Other Skills</h2>
+            <ul className="space-y-2">
+              {others.map((skill) => (
+                <li key={skill.name}>
+                  <div className="flex justify-between xl:text-sm text-xs mb-1">
+                    <span>{skill.name}</span>
+                    <span>{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-gray-300 rounded-full h-1 dark:bg-gray-700">
+                    <div
+                      className={`${skill.color} h-1 rounded-full`}
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="flex items-center justify-center rounded-2xl bg-gray-200 dark:bg-gray-800">
+        <div className="w-full h-full rounded-2xl outline outline-primary -outline-offset-8 overflow-hidden">
           <div className="w-full h-full flex flex-col justify-center items-center text-center p-6">
-            <p className="xl:text-sm text-xs">{about.description}</p>
+            <p className="xl:text-sm text-xs">{about.experiences}</p>
           </div>
         </div>
       </SwiperSlide>
