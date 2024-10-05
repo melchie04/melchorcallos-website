@@ -24,7 +24,7 @@ const About = () => {
       <div className="lg:w-4/5 md:w-3/4 min-w-80 h-full flex flex-col justify-center items-center animate-float">
         <PageTitle title={about.title} subtitle={about.subtitle} />
         <Cards />
-        <p className="text-gray-600 dark:text-gray-400 pb-3">
+        <p className="text-secondary-light dark:text-secondary-dark pb-3">
           Swipe left to learn more about me!
         </p>
       </div>
@@ -74,6 +74,13 @@ const Cards = () => {
                 <FaGithubSquare size={28} />
               </LinkButton>
             </div>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="flex items-center justify-center rounded-2xl bg-gray-200 dark:bg-gray-800">
+        <div className="w-full h-full rounded-2xl outline outline-primary -outline-offset-8 overflow-hidden">
+          <div className="w-full h-full flex flex-col justify-center items-center text-center p-6">
+            <p className="xl:text-sm text-xs">{about.description}</p>
           </div>
         </div>
       </SwiperSlide>
