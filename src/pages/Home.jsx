@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
@@ -40,10 +41,14 @@ const Greetings = () => {
 };
 
 const Avatar = () => {
+  const [imgLoading, setImgLoading] = useState(true);
   const { setActivePage } = usePageControl();
 
   return (
-    <div className="flex flex-1 justify-center items-center">
+    <div className={`flex flex-1 justify-center items-center transition-opacity duration-500 ${
+      imgLoading ? "opacity-0" : "opacity-100"
+    }`}
+    >
       <Link
         className="size-48 relative rounded-full overflow-hidden bg-dark dark:bg-light after:bg-light after:dark:bg-dark
         before:bg-gradient-to-t before:from-primary before:dark:to-secondary-dark before:to-secondary-light circular-spin-animation"
@@ -55,6 +60,7 @@ const Avatar = () => {
             className="size-full absolute top-0 left-0 object-cover bg-dark dark:bg-light transition-opacity duration-500 hover:opacity-0"
             src={avatar}
             alt="avatar"
+            onLoad={() => setImgLoading(false)}
           />
           <p className="size-full flex justify-center items-center bg-dark dark:bg-light text-primary text-center text-xl font-bold">
             SAY HELLO!
