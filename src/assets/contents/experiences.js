@@ -24,7 +24,7 @@ export const experiences = [
     position: "Programmer Analyst",
     company: "Vertere Global Solutions, Inc.",
     icon: vertere,
-    date: "Jan 2021 - Feb 2022",
+    date: "January 2019 - May 2019",
     description:
       "I participated in a bootcamp where I learned COBOL programming, JCL scripting, and DB2 database management, enhancing my technical skills and understanding of mainframe systems.",
   },
