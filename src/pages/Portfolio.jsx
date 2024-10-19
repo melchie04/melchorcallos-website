@@ -81,7 +81,10 @@ const Projects = () => {
             >
               <h3 className="xl:text-xl text-lg font-bold">{item.name}</h3>
               <p className="xl:text-base text-sm">{item.category}</p>
-              <p className="xl:text-sm text-xs mt-2">{item.details}</p>
+              <p className="xl:text-sm text-xs mt-2">
+                {item.tools.join(" | ")}
+              </p>
+              <p className="xl:text-sm text-xs">{item.details}</p>
               <div className="flex flex-row justify-center items-center mt-4 pointer-events-auto">
                 <LinkButton href={item.github}>
                   <FaGithub size={28} />
