@@ -27,11 +27,11 @@ Welcome to My Personal Website! This website is a showcase of my work in automat
 To use My Personal Website, follow these steps:
 1. Clone the Repository
 ```bash
-git clone https://github.com/username/repository-name.git
+git clone https://github.com/melchie04/melchorcallos-website.git
 ```
 2. Navigate to the Project Directory
 ```bash
-cd repository-name
+cd melchorcallos-website
 ```
 3. Install Dependencies
 ```bash
