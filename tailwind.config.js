@@ -6,8 +6,11 @@ export default {
     extend: {
       colors: {
         dark: "#051622",
-        light: "#e7f0f8",
-        primary: "#1ba098",
+        light: "#e6e8e9",
+        primary: {
+          dark: "#1ba098",
+          light: "#0e504c",
+        },
         secondary: {
           dark: "#deb992",
           light: "#6f5c49",
@@ -62,19 +65,54 @@ export default {
           background: "transparent",
         },
         ".custom-scrollbar::-webkit-scrollbar-thumb": {
-          background: "#1ba098",
+          background: "#0e504c",
           borderRadius: "4px",
         },
         ".custom-scrollbar::-webkit-scrollbar-thumb:hover": {
-          background: "#1ba098",
+          background: "#0e504c",
         },
         ".custom-scrollbar": {
           scrollbarWidth: "thin",
+          scrollbarColor: "#0e504c transparent",
+        },
+        ".dark .custom-scrollbar::-webkit-scrollbar-thumb": {
+          background: "#1ba098",
+          borderRadius: "4px",
+        },
+        ".dark .custom-scrollbar::-webkit-scrollbar-thumb:hover": {
+          background: "#1ba098",
+        },
+        ".dark .custom-scrollbar": {
+          scrollbarWidth: "thin",
           scrollbarColor: "#1ba098 transparent",
         },
-        ".swiper-slide-shadow": {
-          boxShadow:
-            "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
+        '.custom-swiper-pagination-bullet': {
+          'background-color': 'rgba(5, 22, 34, 0.8)',
+          'opacity': '0.3',
+          'border-radius': '0.5rem',
+          'width': '0.5rem',
+          'height': '0.5rem',
+          'display': 'inline-block',
+          'cursor': 'pointer',
+          'margin': '0 0.25rem',
+        },
+        '.custom-swiper-pagination-bullet-active': {
+          'background-color': '#051622',
+          'opacity': '1',
+        },
+        '.dark .custom-swiper-pagination-bullet': {
+          'background-color': 'rgba(230, 232, 233, 0.8)',
+          'opacity': '0.3',
+          'border-radius': '0.5rem',
+          'width': '0.5rem',
+          'height': '0.5rem',
+          'display': 'inline-block',
+          'cursor': 'pointer',
+          'margin': '0 0.25rem',
+        },
+        '.dark .custom-swiper-pagination-bullet-active': {
+          'background-color': '#e6e8e9',
+          'opacity': '1',
         },
       });
     },

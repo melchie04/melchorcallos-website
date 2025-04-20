@@ -4,16 +4,16 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import DarkModeProvider from "./providers/DarkModeProvider.jsx";
 import PageControlProvider from "./providers/PageControlProvider.jsx";
-import "./assets/styles/tailwind.css";
+import "./styles/tailwind.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <DarkModeProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <DarkModeProvider>
         <PageControlProvider>
           <App />
         </PageControlProvider>
-      </BrowserRouter>
-    </DarkModeProvider>
+      </DarkModeProvider>
+    </BrowserRouter>
   </StrictMode>
 );

@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Background from "./components/Background";
-import Preloader from "./components/Preloader";
-import NavBar from "./components/NavBar";
-import SocialMenu from "./components/SocialMenu";
-import DownloadButton from "./components/DownloadButton";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
+import Background from "./components/global/Background";
+import Preloader from "./components/global/Preloader";
+import NavBar from "./components/global/NavBar";
+import SocialMenu from "./components/global/SocialMenu";
+import DownloadButton from "./components/global/DownloadButton";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import PortfolioPage from "./pages/PortfolioPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   const location = useLocation();
@@ -34,10 +34,10 @@ function App() {
           <div className="min-h-screen flex flex-col justify-center items-center overflow-hidden">
             <AnimatePresence mode="wait">
               <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/portfolio" element={<PortfolioPage />} />
+                <Route path="/contact" element={<ContactPage />} />
               </Routes>
             </AnimatePresence>
           </div>
