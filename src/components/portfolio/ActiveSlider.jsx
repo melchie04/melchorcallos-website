@@ -11,12 +11,11 @@ import "swiper/css/free-mode";
 const ActiveSlider = () => {
   // Project Card
   const ProjectCard = ({ project }) => (
-    <div className="flex flex-col group relative shadow-lg rounded-xl p-8 mb-10 h-80 w-[240px] overflow-hidden cursor-pointer">
+    <div className="flex flex-col group relative shadow-lg rounded-xl border-2 border-dark/70 dark:border-light/70 p-8 mb-10 h-80 w-[240px] overflow-hidden cursor-pointer">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${project.image})` }}
       />
-      <div className="absolute inset-0 bg-dark/30 group-hover:opacity-0 transition-colors duration-300" />
       <div className="absolute bottom-0 left-0 w-full bg-gray-100 dark:bg-gray-800 px-6 py-4 flex flex-col gap-1">
         <h1 className="text-base font-semibold text-dark dark:text-light">
           {project.name}
@@ -24,7 +23,7 @@ const ActiveSlider = () => {
         <p className="text-xs text-dark/80 dark:text-light/80">
           {project.description}
         </p>
-        <div className="flex gap-2 mt-2">
+        <div className="flex gap-2 mt-2 z-10">
           {project.github && (
             <LinkButton href={project.github}>
               <FaGithub size={16} />
@@ -37,6 +36,7 @@ const ActiveSlider = () => {
           )}
         </div>
       </div>
+      <div className="absolute inset-0 bg-light/10 dark:bg-dark/10 group-hover:opacity-0 transition-colors duration-300" />
     </div>
   );
 
