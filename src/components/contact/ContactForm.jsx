@@ -66,7 +66,7 @@ const ContactForm = () => {
     >
       <input
         className="w-full bg-transparent rounded-md border-2 border-dark/70 dark:border-light/70
-        focus:outline-none focus:ring-2 focus:ring-dark focus:dark:ring-light p-2"
+        focus:outline-none focus:ring-2 focus:ring-dark focus:dark:ring-light p-2 custom-placeholder"
         type="text"
         id="name"
         name="name"
@@ -76,7 +76,7 @@ const ContactForm = () => {
       />
       <input
         className="w-full bg-transparent rounded-md border-2 border-dark/70 dark:border-light/70
-        focus:outline-none focus:ring-2 focus:ring-dark focus:dark:ring-light p-2"
+        focus:outline-none focus:ring-2 focus:ring-dark focus:dark:ring-light p-2 custom-placeholder"
         type="email"
         id="email"
         name="email"
@@ -86,7 +86,7 @@ const ContactForm = () => {
       />
       <textarea
         className="w-full bg-transparent rounded-md border-2 border-dark/70 dark:border-light/70
-        focus:outline-none focus:ring-2 focus:ring-dark focus:dark:ring-light p-2 pb-12 custom-scrollbar"
+        focus:outline-none focus:ring-2 focus:ring-dark focus:dark:ring-light p-2 pb-12 custom-scrollbar custom-placeholder"
         id="message"
         name="message"
         autoComplete="off"

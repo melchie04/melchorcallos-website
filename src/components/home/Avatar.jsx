@@ -21,12 +21,13 @@ const Avatar = () => {
       >
         <div className="flex flex-col justify-center items-center absolute inset-[12px] z-10 rounded-full overflow-hidden cursor-pointer">
           <img
-            className="size-full absolute top-0 left-0 object-cover bg-dark dark:bg-light transition-opacity duration-500 hover:opacity-0"
+            className="size-full absolute top-0 left-0 object-cover select-none bg-dark dark:bg-light transition-opacity duration-500 hover:opacity-0"
             src={avatar}
             alt="avatar"
+            draggable="false"
             onLoad={() => setIsImageLoading(false)}
           />
-          <p className="size-full flex justify-center items-center bg-dark dark:bg-light text-primary-dark dark:text-primary-light text-center text-xl font-bold">
+          <p className="size-full flex justify-center items-center bg-dark dark:bg-light text-primary-dark dark:text-primary-light text-center text-xl font-bold select-none">
             SAY HELLO!
           </p>
         </div>

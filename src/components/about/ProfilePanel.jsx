@@ -12,10 +12,10 @@ const ProfilePanel = () => {
   // Info Label
   const InfoLabel = ({ fieldName, fieldValue }) => (
     <div className="py-2 sm:grid sm:grid-cols-3 sm:gap-x-2">
-      <dt className="text-xs font-medium text-dark/50 dark:text-light/50">
+      <dt className="text-xs font-medium text-dark/50 dark:text-light/50 select-none">
         {fieldName}
       </dt>
-      <dd className="md:text-sm text-xs text-dark dark:text-light sm:mt-0 sm:col-span-2">
+      <dd className="md:text-sm text-xs text-dark dark:text-light sm:mt-0 sm:col-span-2 select-none">
         {fieldValue}
       </dd>
     </div>
@@ -50,7 +50,7 @@ const ProfilePanel = () => {
 
   return (
     <div className="p-4 w-full h-full flex flex-col overflow-y-auto overflow-x-hidden custom-scrollbar">
-      <p className="mb-2 md:text-base text-sm text-justify break-words">
+      <p className="mb-2 md:text-base text-sm text-justify break-words select-none">
         {description}
       </p>
       <div className="flex flex-row my-2 gap-2">

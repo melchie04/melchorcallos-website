@@ -12,7 +12,7 @@ const AboutSection = () => {
   // Side Bar Option
   const SideBarOption = ({ children, sideBarOption }) => (
     <li
-      className={`flex items-center p-4 cursor-pointer ${
+      className={`flex items-center p-4 cursor-pointer select-none ${
         activeSidePanel === sideBarOption
           ? "text-primary-light dark:text-primary-dark"
           : "hover:text-primary-light hover:dark:text-primary-dark"

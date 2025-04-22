@@ -10,9 +10,10 @@ const SkillsPanel = () => {
       <img
         src={skill.icon}
         alt={skill.name}
-        className="w-8 h-8 object-contain my-1"
+        draggable="false"
+        className="w-8 h-8 object-contain select-none my-1"
       />
-      <p className="text-xs text-dark/50 dark:text-light/50 font-medium text-center my-1">{skill.name}</p>
+      <p className="text-xs text-dark/50 dark:text-light/50 font-medium text-center select-none my-1">{skill.name}</p>
     </div>
   );
 
@@ -30,7 +31,7 @@ const SkillsPanel = () => {
 
   return (
     <div className="p-4 w-full h-full flex flex-col overflow-y-auto overflow-x-hidden custom-scrollbar">
-      <p className="mb-2 md:text-base text-sm text-justify break-words">
+      <p className="mb-2 md:text-base text-sm text-justify break-words select-none">
         {description}
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">

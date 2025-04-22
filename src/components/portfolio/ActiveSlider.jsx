@@ -17,10 +17,10 @@ const ActiveSlider = () => {
         style={{ backgroundImage: `url(${project.image})` }}
       />
       <div className="absolute bottom-0 left-0 w-full bg-gray-100 dark:bg-gray-800 px-6 py-4 flex flex-col gap-1">
-        <h1 className="text-base font-semibold text-dark dark:text-light">
+        <h1 className="text-base font-semibold text-dark dark:text-light select-none">
           {project.name}
         </h1>
-        <p className="text-xs text-dark/80 dark:text-light/80">
+        <p className="text-xs text-dark/80 dark:text-light/80 select-none">
           {project.description}
         </p>
         <div className="flex gap-2 mt-2 z-10">

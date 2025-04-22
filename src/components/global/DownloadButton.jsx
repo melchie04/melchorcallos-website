@@ -16,7 +16,7 @@ const DownloadButton = () => {
   return (
     <div className="fixed bottom-0 right-0 z-50">
       <button
-        className="flex items-center font-bold text-primary-light dark:text-primary-dark text-2xl hover:animate-shake mx-4 my-4"
+        className="flex items-center font-bold text-primary-light dark:text-primary-dark text-2xl select-none hover:animate-shake mx-4 my-4"
         onClick={handleDownload}
       >
         <FaDownload className="mr-2"/>

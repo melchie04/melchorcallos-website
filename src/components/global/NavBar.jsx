@@ -21,7 +21,7 @@ const NavBar = () => {
   const Logo = () => (
     <div className="flex justify-center items-center cursor-pointer md:mx-5 mx-0">
       <Link to="/" onClick={() => setActivePage("/")}>
-        <h1 className="text-2xl font-bold text-primary-light dark:text-primary-dark">
+        <h1 className="text-2xl font-bold text-primary-light dark:text-primary-dark select-none">
           &lt;/MC&gt;
         </h1>
       </Link>
@@ -51,7 +51,7 @@ const NavBar = () => {
           link.href === activePage
             ? "text-primary-light dark:text-primary-dark"
             : "text-dark dark:text-light hover:text-primary-light hover:dark:text-primary-dark"
-        } duration-500 cursor-pointer`}
+        } select-none duration-500 cursor-pointer`}
         onClick={() => handleLink(link.href)}
       >
         {link.name}
