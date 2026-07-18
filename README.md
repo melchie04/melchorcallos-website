@@ -1,7 +1,7 @@
 # My Personal Website - Melchor Callos
 Welcome to My Personal Website! This website is a showcase of my work in automation testing and website development. Here, you'll find a collection of my projects, each demonstrating my expertise in creating functional and user-friendly web solutions. Whether you're interested in exploring my automation testing scripts or the various websites I've developed, this site provides a comprehensive look at my skills and accomplishments. Feel free to browse through the different sections, and don't hesitate to reach out if you have any questions or collaboration ideas. I'm always open to new opportunities and discussions.
 
-<img src="https://github.com/melchie04/melchorcallos/blob/main/public/screenshot.jpg?raw=true" alt="Melchor Callos Website" width="600"/>
+<img src="https://github.com/melchie04/melchorcallos/blob/main/public/banner.jpg?raw=true" alt="Melchor Callos Website" width="600"/>
 
 #
 ### 🧰 Tools I've Used:
