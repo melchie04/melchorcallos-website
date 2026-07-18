@@ -34,13 +34,13 @@ const SocialMenu = () => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 z-50 flex md:flex-col flex-row-reverse m-4">
+    <div className="fixed bottom-0 right-0 z-50 flex md:flex-col flex-row m-4">
       <div
         className={`flex md:flex-col flex-row transition-all duration-500 
           ${
             isSocialMenuOpen
               ? "opacity-100 md:translate-y-0 translate-x-0"
-              : "opacity-0 md:translate-y-5 -translate-x-5 hidden"
+              : "opacity-0 md:translate-y-5 translate-x-5 hidden"
           }`}
       >
         <RoundButton href={linkedin}>
