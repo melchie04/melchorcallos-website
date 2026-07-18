@@ -25,6 +25,8 @@ const Avatar = () => {
             src={avatar}
             alt="avatar"
             draggable="false"
+            loading="eager"
+            fetchPriority="high"
             onLoad={() => setIsImageLoading(false)}
           />
           <p className="size-full flex justify-center items-center bg-dark dark:bg-light text-primary-dark dark:text-primary-light text-center text-xl font-bold select-none">
