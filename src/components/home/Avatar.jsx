@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { usePageControl } from "../../context/PageControlProvider";
 import { avatar } from "../../assets/contents/images";
@@ -6,6 +6,13 @@ import { avatar } from "../../assets/contents/images";
 const Avatar = () => {
   const [isImageLoading, setIsImageLoading] = useState(true);
   const { setActivePage } = usePageControl();
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    if (imageRef.current) {
+      imageRef.current.setAttribute("fetchpriority", "high");
+    }
+  }, []);
 
   return (
     <div
@@ -21,12 +28,12 @@ const Avatar = () => {
       >
         <div className="flex flex-col justify-center items-center absolute inset-[12px] z-10 rounded-full overflow-hidden cursor-pointer">
           <img
+            ref={imageRef}
             className="size-full absolute top-0 left-0 object-cover select-none bg-dark dark:bg-light transition-opacity duration-500 hover:opacity-0"
             src={avatar}
             alt="avatar"
             draggable="false"
             loading="eager"
-            fetchPriority="high"
             onLoad={() => setIsImageLoading(false)}
           />
           <p className="size-full flex justify-center items-center bg-dark dark:bg-light text-primary-dark dark:text-primary-light text-center text-xl font-bold select-none">

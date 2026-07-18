@@ -186,40 +186,51 @@ const ActiveSlider = () => {
 
   return (
     <>
-      <Swiper
-        onSwiper={(swiper) => {
-          swiperRef.current = swiper;
+      {/* Edge Fading Wrapper Container */}
+      <div
+        className="relative lg:w-[800px] sm:w-[530px] w-[300px] overflow-hidden px-2"
+        style={{
+          maskImage:
+            "linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%)",
         }}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 5,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 5,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 5,
-          },
-        }}
-        loop={true}
-        speed={4000}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        modules={[Autoplay, Pagination]}
-        className="lg:w-[800px] sm:w-[530px] w-[300px] flex justify-center items-center"
       >
-        {projects.map((project, index) => (
-          <SwiperSlide key={index} className="flex justify-center">
-            <ProjectCard project={project} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Swiper
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 5,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 5,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 5,
+            },
+          }}
+          loop={true}
+          speed={4000}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          modules={[Autoplay, Pagination]}
+          className="w-full flex justify-center items-center"
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={index} className="flex justify-center">
+              <ProjectCard project={project} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
       {/* Details Popup */}
       <AnimatePresence>

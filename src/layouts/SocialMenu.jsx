@@ -20,7 +20,7 @@ const SocialMenu = () => {
       whileHover={tapScale.whileHover}
       whileTap={tapScale.whileTap}
       transition={tapScale.transition}
-      className="size-8 flex justify-center items-center rounded-full bg-primary-light dark:bg-primary-dark
+      className="size-12 flex justify-center items-center rounded-full bg-primary-light dark:bg-primary-dark
         text-light dark:text-dark text-xl cursor-pointer m-2"
     >
       {children}
@@ -34,7 +34,7 @@ const SocialMenu = () => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 z-50 flex md:flex-col flex-row-reverse m-2">
+    <div className="fixed bottom-0 left-0 z-50 flex md:flex-col flex-row-reverse m-4">
       <div
         className={`flex md:flex-col flex-row transition-all duration-500 
           ${

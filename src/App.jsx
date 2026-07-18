@@ -5,7 +5,6 @@ import Background from "./layouts/Background";
 import Preloader from "./layouts/Preloader";
 import NavBar from "./layouts/NavBar";
 import SocialMenu from "./layouts/SocialMenu";
-// import DownloadButton from "./layouts/DownloadButton";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import WorksPage from "./pages/WorksPage";
@@ -30,7 +29,6 @@ function App() {
         <>
           <NavBar />
           <SocialMenu />
-          {/* <DownloadButton /> */}
           <div className="min-h-screen flex flex-col justify-center items-center overflow-hidden">
             <AnimatePresence mode="wait">
               <Routes location={location} key={location.pathname}>
