@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { usePageControl } from "../../providers/PageControlProvider";
+import { usePageControl } from "../../context/PageControlProvider";
 import { avatar } from "../../assets/contents/images";
 
 const Avatar = () => {

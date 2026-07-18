@@ -1,34 +1,31 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import { LuSend } from "react-icons/lu";
 import { toast } from "react-toastify";
+import { sendTelegramMessage } from "../../services/telegramService";
 import "react-toastify/dist/ReactToastify.css";
-
-// Environment Variables
-const publicKey = import.meta.env.VITE_PUBLIC_KEY;
-const serviceId = import.meta.env.VITE_SERVICE_ID;
-const templateId = import.meta.env.VITE_TEMPLATE_ID;
-
-emailjs.init(publicKey);
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendMessage = (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .sendForm(serviceId, templateId, e.target, publicKey)
-      .then((result) => {
-        console.log(result.text);
-        toastSuccess("Email sent successfully!");
-        setLoading(false);
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    sendTelegramMessage({ name, email, message })
+      .then(() => {
+        toastSuccess("Message sent successfully!");
         e.target.reset();
       })
       .catch((error) => {
-        console.log(error.text);
-        toastError("Failed to send email. Please try again.");
+        console.log(error);
+        toastError("Failed to send message. Please try again.");
+      })
+      .finally(() => {
         setLoading(false);
       });
   };
@@ -62,11 +59,11 @@ const ContactForm = () => {
   return (
     <form
       className="w-full flex flex-col justify-center items-center px-6 space-y-3"
-      onSubmit={sendEmail}
+      onSubmit={sendMessage}
     >
       <input
-        className="w-full bg-transparent rounded-md border-2 border-dark/70 dark:border-light/70
-        focus:outline-none focus:ring-2 focus:ring-dark focus:dark:ring-light p-2 custom-placeholder"
+        className="w-full bg-transparent rounded-md border border-dark/70 dark:border-light/70
+        focus:outline-none focus:ring-2 focus:ring-[#0e504c] focus:dark:ring-[#1ba098] p-2 custom-placeholder"
         type="text"
         id="name"
         name="name"
@@ -75,8 +72,8 @@ const ContactForm = () => {
         required
       />
       <input
-        className="w-full bg-transparent rounded-md border-2 border-dark/70 dark:border-light/70
-        focus:outline-none focus:ring-2 focus:ring-dark focus:dark:ring-light p-2 custom-placeholder"
+        className="w-full bg-transparent rounded-md border border-dark/70 dark:border-light/70
+        focus:outline-none focus:ring-2 focus:ring-[#0e504c] focus:dark:ring-[#1ba098] p-2 custom-placeholder"
         type="email"
         id="email"
         name="email"
@@ -85,8 +82,8 @@ const ContactForm = () => {
         required
       />
       <textarea
-        className="w-full bg-transparent rounded-md border-2 border-dark/70 dark:border-light/70
-        focus:outline-none focus:ring-2 focus:ring-dark focus:dark:ring-light p-2 pb-12 custom-scrollbar custom-placeholder"
+        className="w-full bg-transparent rounded-md border border-dark/70 dark:border-light/70
+        focus:outline-none focus:ring-2 focus:ring-[#0e504c] focus:dark:ring-[#1ba098] p-2 pb-12 custom-scrollbar custom-placeholder"
         id="message"
         name="message"
         autoComplete="off"
@@ -94,8 +91,10 @@ const ContactForm = () => {
         required
       ></textarea>
       <button
-        className="flex justify-center items-center bg-dark/70 dark:bg-light/70 text-lg text-light dark:text-dark
-        font-semibold rounded-lg cursor-pointer py-2 px-8 transition duration-300 hover:bg-dark/50 hover:dark:bg-light/50"
+        className="relative flex justify-center items-center text-lg font-semibold rounded-lg cursor-pointer py-2 px-8
+        text-light dark:text-dark bg-primary-light dark:bg-primary-dark
+        disabled:opacity-60 disabled:hover:shadow-[0_0_10px_2px_rgba(27,160,152,0.55)]
+        transition-all duration-300 hover:scale-105 active:scale-95"
         type="submit"
         disabled={loading}
       >

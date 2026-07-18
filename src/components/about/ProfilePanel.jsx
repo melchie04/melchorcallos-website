@@ -1,11 +1,13 @@
 import PropTypes from "prop-types";
-import { FaLinkedin, FaFacebookSquare, FaGithubSquare } from "react-icons/fa";
-import LinkButton from "../global/LinkButton"
+import { motion } from "motion/react";
+import { FaLinkedin, FaGithubSquare, FaEnvelopeSquare } from "react-icons/fa";
+import LinkButton from "../global/LinkButton";
 import { profile, socials } from "../../assets/contents/contents";
+import { fadeInUp } from "../../utils/motionVariants";
 
 const ProfilePanel = () => {
   const { description, info } = profile;
-  const { linkedin, github, facebook } = socials;
+  const { linkedin, github, gmail } = socials;
   const columnOne = info.slice(0, Math.ceil(info.length / 2));
   const columnTwo = info.slice(Math.ceil(info.length / 2));
 
@@ -29,7 +31,7 @@ const ProfilePanel = () => {
   // Info List
   const InfoList = () => (
     <div className="my-2">
-      <dl className="grid grid-cols-1 md:grid-cols-2 gap-x-4">
+      <dl className="grid grid-cols-1 md:grid-cols-2 gap-x-10">
         {columnOne.map((item) => (
           <InfoLabel
             key={item.fieldName}
@@ -49,13 +51,18 @@ const ProfilePanel = () => {
   );
 
   return (
-    <div className="p-4 w-full h-full flex flex-col overflow-y-auto overflow-x-hidden custom-scrollbar">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={fadeInUp}
+      className="p-4 w-full h-full flex flex-col overflow-y-auto overflow-x-hidden custom-scrollbar"
+    >
       <p className="mb-2 md:text-base text-sm text-justify break-words select-none">
         {description}
       </p>
       <div className="flex flex-row my-2 gap-2">
-        <LinkButton href={facebook}>
-          <FaFacebookSquare size={24} />
+        <LinkButton href={gmail}>
+          <FaEnvelopeSquare size={24} />
         </LinkButton>
         <LinkButton href={linkedin}>
           <FaLinkedin size={24} />
@@ -65,7 +72,7 @@ const ProfilePanel = () => {
         </LinkButton>
       </div>
       <InfoList />
-    </div>
+    </motion.div>
   );
 };
 

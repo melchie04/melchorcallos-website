@@ -1,32 +1,33 @@
 import PropTypes from "prop-types";
+import { motion } from "motion/react";
 import { skills } from "../../assets/contents/contents";
+import { staggerContainer, fadeInUp } from "../../utils/motionVariants";
 
 const SkillsPanel = () => {
   const { description, skillList } = skills;
 
-  // Skill Card
-  const SkillCard = ({ skill }) => (
-    <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md py-3 flex flex-col items-center justify-center ">
-      <img
-        src={skill.icon}
-        alt={skill.name}
-        draggable="false"
-        className="w-8 h-8 object-contain select-none my-1"
-      />
-      <p className="text-xs text-dark/50 dark:text-light/50 font-medium text-center select-none my-1">{skill.name}</p>
-    </div>
+  // Skill Badge
+  const SkillBadge = ({ name }) => (
+    <motion.div
+      variants={fadeInUp}
+      whileHover={{ scale: 1.08, y: -2 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="group px-4 py-2 rounded-full border-2 border-primary-light/40 dark:border-primary-dark/40
+      bg-gray-100 dark:bg-gray-800 hover:bg-primary-light hover:dark:bg-primary-dark
+      hover:border-primary-light hover:dark:border-primary-dark shadow-md cursor-default transition-colors duration-300"
+    >
+      <p
+        className="text-xs md:text-sm font-semibold text-dark/70 dark:text-light/70
+      group-hover:text-light group-hover:dark:text-dark select-none whitespace-nowrap transition-colors duration-300"
+      >
+        {name}
+      </p>
+    </motion.div>
   );
 
-  SkillCard.propTypes = {
-    skill: PropTypes.shape({
-      icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.shape({
-          default: PropTypes.string,
-        }),
-      ]).isRequired,
-      name: PropTypes.string.isRequired,
-    }).isRequired,
+  SkillBadge.propTypes = {
+    name: PropTypes.string.isRequired,
   };
 
   return (
@@ -34,11 +35,16 @@ const SkillsPanel = () => {
       <p className="mb-2 md:text-base text-sm text-justify break-words select-none">
         {description}
       </p>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        animate="visible"
+        className="flex flex-wrap gap-3 my-2"
+      >
         {skillList.map((skill, index) => (
-          <SkillCard key={index} skill={skill} />
+          <SkillBadge key={index} name={skill.name} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

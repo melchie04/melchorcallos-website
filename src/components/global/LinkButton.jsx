@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { motion } from "motion/react";
+import { tapScale } from "../../utils/motionVariants";
 
 const LinkButton = ({ children, href }) => {
   LinkButton.propTypes = {
@@ -7,14 +9,17 @@ const LinkButton = ({ children, href }) => {
   };
 
   return (
-    <a
+    <motion.a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-primary-light dark:text-primary-dark hover:scale-125 duration-300"
+      whileHover={tapScale.whileHover}
+      whileTap={tapScale.whileTap}
+      transition={tapScale.transition}
+      className="text-primary-light dark:text-primary-dark inline-block"
     >
       {children}
-    </a>
+    </motion.a>
   );
 };
 

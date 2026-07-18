@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import { motion } from "motion/react";
 import { FaBookOpen, FaBriefcase, FaLaptop, FaUser } from "react-icons/fa";
 import ProfilePanel from "./ProfilePanel";
 import ExperiencePanel from "./ExperiencePanel";
@@ -11,7 +12,10 @@ const AboutSection = () => {
 
   // Side Bar Option
   const SideBarOption = ({ children, sideBarOption }) => (
-    <li
+    <motion.li
+      whileHover={{ x: 4 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 400, damping: 20 }}
       className={`flex items-center p-4 cursor-pointer select-none ${
         activeSidePanel === sideBarOption
           ? "text-primary-light dark:text-primary-dark"
@@ -21,7 +25,7 @@ const AboutSection = () => {
     >
       {children}
       <span className="ml-4 hidden md:block">{sideBarOption}</span>
-    </li>
+    </motion.li>
   );
 
   SideBarOption.propTypes = {
