@@ -92,8 +92,7 @@ const ContactForm = () => {
       ></textarea>
       <button
         className="relative flex justify-center items-center text-lg font-semibold rounded-lg cursor-pointer py-2 px-8
-        text-light dark:text-dark bg-primary-light dark:bg-primary-dark
-        disabled:opacity-60 disabled:hover:shadow-[0_0_10px_2px_rgba(27,160,152,0.55)]
+        text-light dark:text-dark bg-primary-light dark:bg-primary-dark disabled:opacity-60 
         transition-all duration-300 hover:scale-105 active:scale-95"
         type="submit"
         disabled={loading}
