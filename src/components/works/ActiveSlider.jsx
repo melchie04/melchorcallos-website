@@ -191,9 +191,9 @@ const ActiveSlider = () => {
         className="relative lg:w-[800px] sm:w-[530px] w-[300px] overflow-hidden px-2"
         style={{
           maskImage:
-            "linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%)",
+            "linear-gradient(to right, transparent, black 14px, black calc(100% - 14px), transparent)",
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%)",
+            "linear-gradient(to right, transparent, black 14px, black calc(100% - 14px), transparent)",
         }}
       >
         <Swiper
