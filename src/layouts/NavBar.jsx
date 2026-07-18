@@ -50,7 +50,7 @@ const NavBar = () => {
 
   // Nav Links
   const NavLinks = ({ link }) => (
-    <li className="text-xs font-bold md:mx-5 md:my-0 mx-0 my-5">
+    <li className="text-xs font-bold md:mx-5 md:my-0 mx-0 my-10">
       <Link
         to={link.href}
         className={`${
