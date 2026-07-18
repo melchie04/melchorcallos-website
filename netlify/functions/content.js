@@ -2,7 +2,7 @@ const GITHUB_OWNER = process.env.GITHUB_OWNER;
 const GITHUB_REPO = process.env.GITHUB_REPO;
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH || "main";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const FILE_PATH = "src/data/siteContent.json";
+const FILE_PATH = "src/assets/data/siteContent.json";
 
 const GITHUB_API = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}`;
 
