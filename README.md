@@ -13,7 +13,6 @@ Welcome to my website! This site is a showcase of who I am and what I build. Her
 #
 ### 📧 If you find any bugs on the website, please contact me here:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Melchor%20Callos-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/melchorcallos)
-[![Facebook](https://img.shields.io/badge/facebook-melchorcallos-blue?style=flat-square&logo=facebook)](https://fb.com/melchorcallos)
 [![Email](https://img.shields.io/badge/Email-melchorcallos04%40gmail.com-blue?style=flat-square&logo=gmail)](mailto:melchorcallos04@gmail.com)
 
 #
