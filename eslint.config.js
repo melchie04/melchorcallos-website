@@ -8,7 +8,6 @@ export default [
   { ignores: ["dist"] },
   {
     files: ["**/*.{js,jsx}"],
-    ignores: ["netlify/functions/**"],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -34,17 +33,6 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
-    },
-  },
-  {
-    files: ["netlify/functions/**/*.js"],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: "commonjs",
-      globals: globals.node,
-    },
-    rules: {
-      ...js.configs.recommended.rules,
     },
   },
 ];

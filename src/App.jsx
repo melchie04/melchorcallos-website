@@ -9,7 +9,6 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import WorksPage from "./pages/WorksPage";
 import ContactPage from "./pages/ContactPage";
-import AdminPage from "./pages/AdminPage";
 
 function App() {
   const location = useLocation();
@@ -20,14 +19,6 @@ function App() {
       setLoading(false);
     }, 2000);
   }, []);
-
-  if (location.pathname.startsWith("/admin")) {
-    return (
-      <Routes>
-        <Route path="/admin" element={<AdminPage />} />
-      </Routes>
-    );
-  }
 
   return (
     <>
