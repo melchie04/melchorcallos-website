@@ -1,16 +1,14 @@
-# My Personal Website - Melchor Callos
-Welcome to My Personal Website! This website is a showcase of my work in automation testing and website development. Here, you'll find a collection of my projects, each demonstrating my expertise in creating functional and user-friendly web solutions. Whether you're interested in exploring my automation testing scripts or the various websites I've developed, this site provides a comprehensive look at my skills and accomplishments. Feel free to browse through the different sections, and don't hesitate to reach out if you have any questions or collaboration ideas. I'm always open to new opportunities and discussions.
+# My Portfolio Website - Melchor Callos
+Welcome to my website! This site is a showcase of who I am and what I build. Here, you'll find a collection of my work, with each project demonstrating my expertise in developing functional, efficient, and user-centric technical solutions. Whether you're interested in exploring my software architectures, automation systems, or hands-on development projects, this site provides a comprehensive look at my skills and accomplishments. Feel free to browse through the different sections, and don't hesitate to reach out if you have any questions or collaboration ideas. I'm always open to new opportunities and discussions.
 
 <img src="https://github.com/melchie04/melchorcallos/blob/main/public/banner.jpg?raw=true" alt="Melchor Callos Website" width="600"/>
 
 #
 ### 🧰 Tools I've Used:
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React.js](https://img.shields.io/badge/React.js-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 #
 ### 📧 If you find any bugs on the website, please contact me here:
